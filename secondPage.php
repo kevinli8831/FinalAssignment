@@ -28,6 +28,7 @@ $_SESSION['selectedProduct']=$selectedProduct;
 
 
 <!DOCTYPE html>
+
 <html>
 <head>
 <title>secondPage</title>
@@ -117,10 +118,8 @@ $_SESSION['selectedProduct']=$selectedProduct;
 
     </div>
 </div>
-
-
-
 </body>
+
 <script src="jquery.js">
     var xmlhttp;
     function AJAXData()
@@ -143,24 +142,25 @@ $_SESSION['selectedProduct']=$selectedProduct;
     console.log('hello');
 
     <?php
-        $isbn='165463';
-        $name='Webbasdasdaasdasd123';
-        $quantity='6';
-        $insert="INSERT into book values(\"".$isbn."\",\"".$name. "\",\"".$quantity. "\")";
-        $database=new mysqli("localhost","u1","a1","hkbookshop");
-
-        if ($database->connect_error)
-            die("Could not connect to database:".$database->connect_error);
-
-        if($database->query($insert)===TRUE)
-            print("Record inserted success");
-        else
-            die("Could not execute insetion!".mysqli_error($database));
-
-        $database->close();
+//        $isbn='165463';
+//        $name='Webbasdasdaasdasd123';
+//        $quantity='6';
+//        $insert="INSERT into book values(\"".$isbn."\",\"".$name. "\",\"".$quantity. "\")";
+//        $database=new mysqli("localhost","u1","a1","hkbookshop");
+//
+//        if ($database->connect_error)
+//            die("Could not connect to database:".$database->connect_error);
+//
+//        if($database->query($insert)===TRUE)
+//            print("Record inserted success");
+//        else
+//            die("Could not execute insetion!".mysqli_error($database));
+//
+//        $database->close();
         ?>
     }
 </script>
+
 <style>
     .display-inlineBlock{
         display: inline-block;
@@ -209,4 +209,5 @@ $_SESSION['selectedProduct']=$selectedProduct;
 	}
 		
 </style>
+
 </html>
