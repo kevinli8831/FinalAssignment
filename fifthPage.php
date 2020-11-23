@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +10,10 @@
 
 <body>
 fifthPage !!!
+
+<?php
+// echo "selected=". $_SESSION['selectedFood'];
+?>
 
 </body>
 

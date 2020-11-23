@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +11,9 @@
 <body>
 fourthPage !!!
 
+<?php
+// echo "selected=". $_SESSION['selectedFood'];
+?>
 </body>
 
 <style>
