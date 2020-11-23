@@ -44,128 +44,81 @@ $_SESSION['selectedProduct']=$selectedProduct;
 	</ul>	
 	</div>
 </div>
-	
-	<section class="food">
-	<div class="container">
-		<div class="box1">
-		<h2>Snacks</h2>
-		</div>	
-		<div class="product-top">
+<div >
+    <h2 style="text-align: center;">Snacks</h2>
+    <div class="row">
+        <div class="display-inlineBlock" style="margin: 0px 10% 0px 25%">
+            <img src="secondPageFood1.jpg">
+            <div class="info">
+                <button> Add to Cart</button>
+                <?php echo "<h3>".$product[0][0]."</h3>"?>
+                <?php echo "<h5>$".$product[0][1]."</h5>"?>
+            </div>
+        </div>
+        <div class="display-inlineBlock">
+            <img src="secondPageFood2.jpeg" >
+            <div class="info">
+                <button> Add to Cart</button>
+            </div>
+            <div>
+                <?php echo "<h3>".$product[1][0]."</h3>"?>
+                <?php echo "<h5>$".$product[1][1]."</h5>"?>
+            </div>
+        </div>
+    </div>
 
-		<table>
-		<tr>	
-			<td> <img src="food1.jpg" ></br>
-			
-			<img src="secondPageFood1.jpg" alt="">
-			<div class="info">
+    <div class="row">
+        <div class="display-inlineBlock"  style="margin: 0px 10% 0px 25%">
+            <img src="secondPageFood3.jpg">
+            <div class="info">
+                <button> Add to Cart</button>
+            </div>
+            <div>
+                <h3>Bourbon Cookie</h3>
+                <h5>$303.00</h5>
+            </div>
+        </div>
 
-				<button> Add to Cart</button>
-				   <?php echo "<h3>".$product[0][0]."</h3>"?>
+        <div class="display-inlineBlock">
+            <img src="secondPageFood4.jpg">
+            <div class="info">
+                <button> Add to Cart</button>
+            </div>
+            <div>
+                <h3>Bourbon Cookie</h3>
+                <h5>$304.00</h5>
+            </div>
+        </div>
 
-                <?php
-                echo "<h5>$".$product[0][1]."</h5>"
-                ?>
-			</td>
-		</div>
-		<td></td><td></td><td></td><td></td><td></td><td></td>
+    </div>
 
-		<div class="product-top">
+    <div class="row">
+        <div class="display-inlineBlock"  style="margin: 0px 10% 0px 25%">
+            <img src="secondPageFood5.jpg">
+            <div class="info">
+                <button> Add to Cart</button>
+            </div>
+            <div>
+                <h3>Bourbon Cookie</h3>
+                <h5>$2000.00</h5>
+            </div>
+        </div>
 
-			<td><img src="food2.jpeg"></br>
-				<button> Add to Cart</button></br>
-				<h3>Corn Soup</h3></br>
-				<h3>$36.00</h3>
-			</td>
-		</tr>
+        <div class="display-inlineBlock">
+            <img src="secondPageFood6.jpg">
+            <div class="info">
+                <button> Add to Cart</button>
+            </div>
+            <div>
+                <h3>Bourbon Cookie</h3>
+                <h5>$100.00</h5>
+            </div>
+        </div>
 
-			<img src="secondPageFood2.jpeg" alt="">
-			<div class="info">
-				<button> Add to Cart</button>
-			</div>
-			<div>
-				<h3>Bourbon Cookie</h3>
-				<h5>$30.00</h5>
-			</div>
+    </div>
+</div>
 
-		
-		</div>
-		
-		<div class="product-top">
 
-		<table>
-		<tr>	
-			<td> <img src="food3.jpg" ></br>
-			
-
-			<img src="secondPageFood3.jpg" alt="">
-			<div class="info">
-
-				<button> Add to Cart</button>
-				<h3>Fries 3 brothers</h3>
-				<h3>$100.00</h3>
-			</td>
-		</div>
-		<td></td><td></td><td></td><td></td><td></td><td></td>
-		<div class="product-top">
-
-			<td><img src="food4.jpg"></br>
-				<button> Add to Cart</button></br>
-				<h3>Calbee Potato Chip</h3>
-				<h3>$36.00</h3>
-			</td>
-		</tr>
-
-			<img src="secondPageFood4.jpg" alt="">
-			<div class="info">
-				<button> Add to Cart</button>
-			</div>
-			<div>
-				<h3>Bourbon Cookie</h3>
-				<h5>$30.00</h5>
-			</div>
-
-		
-		</div>
-
-		<div class="product-top">
-
-		<table>
-		<tr>	
-			<td> <img src="food5.jpg" ></br>
-			
-			<img src="secondPageFood5.jpg" alt="">
-			<div class="info">
-
-				<button> Add to Cart</button>
-				<h3>Curry Cup Noodle</h3>
-				<h3>$30.00</h3>
-			</td>
-		</div>
-		<td></td><td></td><td></td><td></td><td></td><td></td>
-		<div class="product-top">
-
-			<td><img src="food6.jpg"></br>
-				<button> Add to Cart</button></br>
-				<h3>Cheese Curry Cup Noodle</h3>
-				<h3>$36.00</h3>
-			</td>
-		</tr>
-		</table>
-
-			<img src="secondPageFood6.jpg" alt="">
-			<div class="info">
-				<button> Add to Cart</button>
-			</div>
-			<div>
-				<h3>Bourbon Cookie</h3>
-				<h5>$30.00</h5>
-			</div>
-		
-
-		</div>
-	</div>
-	</section>
-secondPage !!!!!!!@#
 
 </body>
 <script src="jquery.js">
@@ -209,13 +162,15 @@ secondPage !!!!!!!@#
     }
 </script>
 <style>
+    .display-inlineBlock{
+        display: inline-block;
+    }
 	.top-bar{
 	height: 57px;
-	top:0;
-	position: #fff;
-	margin-bottom" 20px;
+        background-color: aqua;
+	margin-bottom: 20px;
 	border-bottom: 3px solid orange;
-	z-index: 2;}
+    }
 
 	.logo{
 	height: 40px;
