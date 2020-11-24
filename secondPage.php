@@ -2,12 +2,12 @@
 session_start();
 $product=array
 (
-    array("biscuit",20,1),
-    array("orange",30,2),
-    array("cola",8,3),
-    array("apple",10,4),
-    array("chicken",80,5),
-    array("pork",100,6),
+    array("Biscuit",25,1),
+    array("Corn Soup",30,2),
+    array("Fries Three Brothers",100,3),
+    array("Calbee Chip",16,4),
+    array("Curry Cup Noodle",10,5),
+    array("Cheese Curry Cup Noodle",20,6),
     array("cookie",100,7),
     array("calbee",100,8),
     array("cupDoodle",100,9),
@@ -37,23 +37,31 @@ $_SESSION['selectedProduct']=$selectedProduct;
 
 <body>
 	<div class="top-bar">
-	<!-----logo img---->
+	
+	<div class="logo">
+	<img src="logo.png">
+	</div>
 	
 	<div class="menu-bar">
-	<ul>
-	<!----<li><img src="shoppingcart.jpg"></li> 要再改--->
-	</ul>	
+	
+	<a href="fifth.php"> <img src="shoppingcart.jpg"></a>
+		
 	</div>
-</div>
+	</div>
+	
 <div >
-    <h2 style="text-align: center;">Snacks</h2>
+
+	<div class="header">
+    <p><b>Snacks</b></p>
+	</div>
+	
     <div class="row">
-        <div class="display-inlineBlock" style="margin: 0px 10% 0px 25%">
+        <div class="display-inlineBlock" style="margin: 0px 10% 0px 25%; margin-bottom: 30px;">
             <img src="secondPageFood1.jpg">
             <div class="info">
                 <button> Add to Cart</button>
-                <?php echo "<h3>".$product[0][0]."</h3>"?>
-                <?php echo "<h5>$".$product[0][1]."</h5>"?>
+                <?php echo "<h2>".$product[0][0]."</h2>"?>
+                <?php echo "<h3>$".$product[0][1]."</h3>"?>
             </div>
         </div>
         <div class="display-inlineBlock">
@@ -62,21 +70,21 @@ $_SESSION['selectedProduct']=$selectedProduct;
                 <button> Add to Cart</button>
             </div>
             <div>
-                <?php echo "<h3>".$product[1][0]."</h3>"?>
-                <?php echo "<h5>$".$product[1][1]."</h5>"?>
+                <?php echo "<h2>".$product[1][0]."</h2>"?>
+                <?php echo "<h3>$".$product[1][1]."</h3>"?>
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="display-inlineBlock"  style="margin: 0px 10% 0px 25%">
+        <div class="display-inlineBlock"  style="margin: 0px 10% 0px 25%; margin-bottom: 30px;">
             <img src="secondPageFood3.jpg">
             <div class="info">
                 <button> Add to Cart</button>
             </div>
             <div>
-                <h3>Bourbon Cookie</h3>
-                <h5>$303.00</h5>
+                <?php echo "<h2>".$product[2][0]."</h2>"?>
+                <?php echo "<h3>$".$product[2][1]."</h3>"?>
             </div>
         </div>
 
@@ -86,22 +94,22 @@ $_SESSION['selectedProduct']=$selectedProduct;
                 <button> Add to Cart</button>
             </div>
             <div>
-                <h3>Bourbon Cookie</h3>
-                <h5>$304.00</h5>
+                <?php echo "<h2>".$product[3][0]."</h2>"?>
+                <?php echo "<h3>$".$product[3][1]."</h3>"?>
             </div>
         </div>
 
     </div>
 
     <div class="row">
-        <div class="display-inlineBlock"  style="margin: 0px 10% 0px 25%">
+        <div class="display-inlineBlock"  style="margin: 0px 10% 0px 25%; margin-bottom: 30px;">
             <img src="secondPageFood5.jpg">
             <div class="info">
                 <button> Add to Cart</button>
             </div>
             <div>
-                <h3>Bourbon Cookie</h3>
-                <h5>$2000.00</h5>
+                <?php echo "<h2>".$product[4][0]."</h2>"?>
+                <?php echo "<h3>$".$product[4][1]."</h3>"?>
             </div>
         </div>
 
@@ -111,17 +119,26 @@ $_SESSION['selectedProduct']=$selectedProduct;
                 <button> Add to Cart</button>
             </div>
             <div>
-                <h3>Bourbon Cookie</h3>
-                <h5>$100.00</h5>
+                <?php echo "<h2>".$product[5][0]."</h2>"?>
+                <?php echo "<h3>$".$product[5][1]."</h3>"?>
             </div>
         </div>
 
     </div>
+	
+	<div class="previous"> 
+	<a href="firstPage.php"> <img src="arrowleft.jpg"></a>
+	</div>
+	
+	<div class="next"> 
+	<a href="thirdPage.php"> <img src="arrowright.jpg"></a>
+	</div>
+	
 </div>
 </body>
 
 <script src="jquery.js">
-    var xmlhttp;
+   var xmlhttp;
     function AJAXData()
     {
         xmlhttp = new XMLHttpRequest();
@@ -141,67 +158,87 @@ $_SESSION['selectedProduct']=$selectedProduct;
 
     console.log('hello');
 
-    <?php
+    //<?php
 //        $isbn='165463';
-//        $name='Webbasdasdaasdasd123';
-//        $quantity='6';
-//        $insert="INSERT into book values(\"".$isbn."\",\"".$name. "\",\"".$quantity. "\")";
-//        $database=new mysqli("localhost","u1","a1","hkbookshop");
-//
-//        if ($database->connect_error)
-//            die("Could not connect to database:".$database->connect_error);
-//
-//        if($database->query($insert)===TRUE)
+  //      $name='Webbasdasdaasdasd123';
+    //    $quantity='6';
+ //      $insert="INSERT into book values(\"".$isbn."\",\"".$name. "\",\"".$quantity. "\")";
+  //      $database=new mysqli("localhost","u1","a1","hkbookshop");
+
+    //   if ($database->connect_error)
+     //       die("Could not connect to database:".$database->connect_error);
+
+  //     if($database->query($insert)===TRUE)
 //            print("Record inserted success");
-//        else
-//            die("Could not execute insetion!".mysqli_error($database));
-//
-//        $database->close();
-        ?>
+    //    else
+      //      die("Could not execute insetion!".mysqli_error($database));
+
+       //$database->close();
+    //    ?>
     }
 </script>
 
 <style>
+	body{
+		background-image: url("background.jpg");
+		background-repeat: no-repect;
+		background-size: auto;
+		}
+		
     .display-inlineBlock{
         display: inline-block;
+		background-color: #fff;
     }
 	.top-bar{
-	height: 57px;
+	height: 70px;
         background-color: aqua;
-	margin-bottom: 20px;
+	margin-bottom: -35px;
 	border-bottom: 3px solid orange;
     }
 
-	.logo{
-	height: 40px;
-	margin: 5px 10px;
+	.logo img{
+		width: 160px;
+		height: 70px;
+		float: left;
+	}
+	.menu-bar {
+		float: right;
+	}
+	.menu-bar img{
+		width: 70px;
+		height: 70px;
+		float: right;
 	}
 
-	.box1	{
-	background: #ff9999; 
-	color: #fff;
-	width: 180px;
-	padding: 4px 10px;
-	height: 40px;
-	margin-bottom: 30px;
-	display: flex;
+	.header{
+		display: flex;
+		justify-content: center; 
+		color: white;
+		font-size: 40px;
 	}
 	
-	.box1 h2{
-	font-size: 24px;
-	}
-
-	.container{
-	width: 900px;
-	margin: 0 auto; 
+	.header p{
+		display: block;
+		padding:5px;
+		background-color: orange;
 	}
 	
-	.box1 {
-	position: relative;
-  	
+	.previous{
+		float: left;		
 	}
 	
+	.previous img{
+		width: 50px;
+		height: 50px;
+	}
 	
+	.next{
+		float: right;
+	}
+	.next img{
+		width: 50px;
+		height: 50px;
+	}
 	
 	img {
 	width: 300px;
