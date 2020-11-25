@@ -36,6 +36,7 @@ $_SESSION['selectedProduct']=$selectedProduct;
 	
 
 <body>
+	
 	<div class="top-bar">
 	
 	<div class="logo">
@@ -43,9 +44,12 @@ $_SESSION['selectedProduct']=$selectedProduct;
 	</div>
 	
 	<div class="menu-bar">
-	
-	<a href="fifth.php"> <img src="shoppingcart.jpg"></a>
-		
+	<nav>
+	<ul>
+		<li> <a href="firstPage.php">Home</a></li>
+		<li><a href="fifthPage.php"> <ion-icon name="cart-outline"></ion-icon> Cart <span>0</span></a></li>
+	</ul>
+	</nav>
 	</div>
 	</div>
 	
@@ -127,14 +131,15 @@ $_SESSION['selectedProduct']=$selectedProduct;
     </div>
 	
 	<div class="previous"> 
-	<a href="firstPage.php"> <img src="arrowleft.jpg"></a>
+	<a href="firstPage.php"> <span><ion-icon name="arrow-back-outline"></ion-icon>Previous Page</span></a>
 	</div>
 	
 	<div class="next"> 
-	<a href="thirdPage.php"> <img src="arrowright.jpg"></a>
+	<a href="thirdPage.php"> <span>Next Page<ion-icon name="arrow-forward-outline"></ion-icon></span></a>
 	</div>
 	
 </div>
+	<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 </body>
 
 <script src="jquery.js">
@@ -191,7 +196,6 @@ $_SESSION['selectedProduct']=$selectedProduct;
     }
 	.top-bar{
 	height: 70px;
-        background-color: aqua;
 	margin-bottom: -35px;
 	border-bottom: 3px solid orange;
     }
@@ -204,9 +208,9 @@ $_SESSION['selectedProduct']=$selectedProduct;
 	.menu-bar {
 		float: right;
 	}
-	.menu-bar img{
-		width: 70px;
-		height: 70px;
+	.menu-bar ico-icon{
+		vertical-align: bottom;
+		font-size: 20px;
 		float: right;
 	}
 
@@ -227,17 +231,35 @@ $_SESSION['selectedProduct']=$selectedProduct;
 		float: left;		
 	}
 	
-	.previous img{
-		width: 50px;
-		height: 50px;
+	.previous a{
+		padding: 5px;
+		background-color: #fff;
+		text-decoration: none;
 	}
 	
 	.next{
 		float: right;
 	}
-	.next img{
-		width: 50px;
-		height: 50px;
+	.next a{
+		padding: 5px;
+		background-color: #fff;
+		text-decoration: none;
+	}
+	.menu-bar li{
+		list-style: none;
+		display: inline-block;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	
+	.menu-bar spna{
+		padding-left: 5px;
+	}
+	
+	.menu-bar a{
+		padding: 5px;
+		background-color: #fff;
+		text-decoration: none;
 	}
 	
 	img {
