@@ -205,7 +205,6 @@ foreach($_SESSION['selectedProduct'] as $key=>$value)
 <style>
 	body{
 		background-image: url("background.jpg");
-		background-repeat: no-repeat;
 		background-size: auto;
 		}
 
