@@ -3,12 +3,12 @@ session_set_cookie_params(0);
 session_start();
 $product=array
 (
-    array("biscuit",20,1),
-    array("orange",30,2),
-    array("cola",8,3),
-    array("apple",10,4),
-    array("chicken",80,5),
-    array("pork",100,6),
+    array("Biscuit",25,1),
+    array("Corn Soup",30,2),
+    array("Fries Three Brothers",100,3),
+    array("Calbee Chip",16,4),
+    array("Curry Cup Noodle",10,5),
+    array("Cheese Curry Cup Noodle",20,6),
     array("cookie",100,7),
     array("calbee",100,8),
     array("cupDoodle",100,9),
@@ -53,27 +53,43 @@ foreach($_SESSION['selectedProduct'] as $key=>$value)
 </head>
 
 <body>
+
 	<div class="top-bar">
-	<!-----logo img---->
+
+	<div class="logo">
+	<img src="logo.png">
+	</div>
 	
 	<div class="menu-bar">
+	<nav>
 	<ul>
-	<!----<li><img src="shoppingcart.jpg"></li> 要再改--->
-	</ul>	
+		<li> <a href="firstPage.php">Home</a></li>
+		<li><a href="fifthPage.php"> <ion-icon name="cart-outline"></ion-icon> Cart <span>0</span></a></li>
+	</ul>
+	</nav>
 	</div>
+	</div>
+
+<div >
+
+	<div class="header">
+    <p><b>Snacks</b></p>
+	</div>
+
 </div>
 <div>
     <h2 style="text-align: center;">Snacks</h2>
     <div class="row">
-        <div class="display-inlineBlock" style="margin: 0px 10% 0px 25%">
+        <div class="display-inlineBlock" style="margin: 0px 10% 30px 25%">
             <img src="secondPageFood1.jpg">
             <div class="info">
+                <button> Add to Cart</button>
+                <?php echo "<h2>".$_SESSION['globalProduct'][0][0]."</h2>"?>
+                <?php echo "<h3>$".$_SESSION['globalProduct'][0][1]."</h3>"?>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="1">
                     <input type="submit" value="Add to cart">
                 </form>
-                <?php echo "<h3>".$_SESSION['globalProduct'][0][0]."</h3>"?>
-                <?php echo "<h5>$".$_SESSION['globalProduct'][0][1]."</h5>"?>
             </div>
         </div>
         <div class="display-inlineBlock">
@@ -82,12 +98,11 @@ foreach($_SESSION['selectedProduct'] as $key=>$value)
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="2">
                     <input type="submit" value="Add to cart">
-                    <a href="thirdPage.php">3 page</a>
                 </form>
             </div>
             <div>
-                <?php echo "<h3>".$_SESSION['globalProduct'][1][0]."</h3>"?>
-                <?php echo "<h5>$".$_SESSION['globalProduct'][1][1]."</h5>"?>
+                <?php echo "<h2>".$product[1][0]."</h2>"?>
+                <?php echo "<h3>$".$product[1][1]."</h3>"?>
             </div>
         </div>
     </div>
@@ -102,8 +117,8 @@ foreach($_SESSION['selectedProduct'] as $key=>$value)
                 </form>
             </div>
             <div>
-                <?php echo "<h3>".$_SESSION['globalProduct'][2][0]."</h3>"?>
-                <?php echo "<h5>$".$_SESSION['globalProduct'][2][1]."</h5>"?>
+                <?php echo "<h2>".$_SESSION['globalProduct'][2][0]."</h2>"?>
+                <?php echo "<h3>$".$_SESSION['globalProduct'][2][1]."</h3>"?>
             </div>
         </div>
 
@@ -116,15 +131,15 @@ foreach($_SESSION['selectedProduct'] as $key=>$value)
                 </form>
             </div>
             <div>
-                <?php echo "<h3>".$_SESSION['globalProduct'][3][0]."</h3>"?>
-                <?php echo "<h5>$".$_SESSION['globalProduct'][3][1]."</h5>"?>
+                <?php echo "<h2>".$_SESSION['globalProduct'][3][0]."</h2>"?>
+                <?php echo "<h3>$".$_SESSION['globalProduct'][3][1]."</h3>"?>
             </div>
         </div>
 
     </div>
 
     <div class="row">
-        <div class="display-inlineBlock"  style="margin: 0px 10% 0px 25%">
+        <div class="display-inlineBlock"  style="margin: 0px 10% 30px 25%">
             <img src="secondPageFood5.jpg">
             <div class="info">
                 <form action="secondPage.php" method="post">
@@ -133,8 +148,8 @@ foreach($_SESSION['selectedProduct'] as $key=>$value)
                 </form>
             </div>
             <div>
-                <?php echo "<h3>".$_SESSION['globalProduct'][4][0]."</h3>"?>
-                <?php echo "<h5>$".$_SESSION['globalProduct'][4][1]."</h5>"?>
+                <?php echo "<h2>".$_SESSION['globalProduct'][4][0]."</h2>"?>
+                <?php echo "<h3>$".$_SESSION['globalProduct'][4][1]."</h3>"?>
             </div>
         </div>
 
@@ -147,13 +162,23 @@ foreach($_SESSION['selectedProduct'] as $key=>$value)
                 </form>
             </div>
             <div>
-                <?php echo "<h3>".$_SESSION['globalProduct'][5][0]."</h3>"?>
-                <?php echo "<h5>$".$_SESSION['globalProduct'][5][1]."</h5>"?>
+                <?php echo "<h2>".$_SESSION['globalProduct'][5][0]."</h2>"?>
+                <?php echo "<h3>$".$_SESSION['globalProduct'][5][1]."</h3>"?>
             </div>
         </div>
 
     </div>
+
+	<div class="previous">
+	<a href="firstPage.php"> <span><ion-icon name="arrow-back-outline"></ion-icon>Previous Page</span></a>
+	</div>
+
+	<div class="next">
+	<a href="thirdPage.php"> <span>Next Page<ion-icon name="arrow-forward-outline"></ion-icon></span></a>
+	</div>
+
 </div>
+	<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 </body>
 
 <script src="jquery.js"></script>
@@ -178,47 +203,84 @@ foreach($_SESSION['selectedProduct'] as $key=>$value)
 </script>
 
 <style>
+	body{
+		background-image: url("background.jpg");
+		background-repeat: no-repeat;
+		background-size: auto;
+		}
+
     .display-inlineBlock{
         display: inline-block;
+		background-color: #fff;
     }
 	.top-bar{
-	height: 57px;
-        background-color: aqua;
-	margin-bottom: 20px;
+	height: 70px;
+	margin-bottom: -35px;
 	border-bottom: 3px solid orange;
     }
 
-	.logo{
-	height: 40px;
-	margin: 5px 10px;
+	.logo img{
+		width: 160px;
+		height: 70px;
+		float: left;
+	}
+	.menu-bar {
+		float: right;
+	}
+	.menu-bar ico-icon{
+		vertical-align: bottom;
+		font-size: 20px;
+		float: right;
 	}
 
-	.box1	{
-	background: #ff9999; 
-	color: #fff;
-	width: 180px;
-	padding: 4px 10px;
-	height: 40px;
-	margin-bottom: 30px;
-	display: flex;
+	.header{
+		display: flex;
+		justify-content: center;
+		color: white;
+		font-size: 40px;
 	}
 	
-	.box1 h2{
-	font-size: 24px;
+	.header p{
+		display: block;
+		padding:5px;
+		background-color: orange;
 	}
 
-	.container{
-	width: 900px;
-	margin: 0 auto; 
+	.previous{
+		float: left;
 	}
 	
-	.box1 {
-	position: relative;
-  	
+	.previous a{
+		padding: 5px;
+		background-color: #fff;
+		text-decoration: none;
+	}
+
+	.next{
+		float: right;
+	}
+	.next a{
+		padding: 5px;
+		background-color: #fff;
+		text-decoration: none;
+	}
+	.menu-bar li{
+		list-style: none;
+		display: inline-block;
+		padding-right: 10px;
+		padding-left: 10px;
 	}
 	
-	
-	
+	.menu-bar spna{
+		padding-left: 5px;
+	}
+
+	.menu-bar a{
+		padding: 5px;
+		background-color: #fff;
+		text-decoration: none;
+	}
+
 	img {
 	width: 300px;
 	height: 300px;
