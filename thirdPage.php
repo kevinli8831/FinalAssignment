@@ -35,14 +35,14 @@ if(isset($_SESSION['selectedProduct'])&& isset($_POST['value']))
     array_push($_SESSION['selectedProduct'],$temp);
 }
 
-
-foreach($_SESSION['selectedProduct'] as $key=>$value)
-{
-    // and print out the values
-    echo 'The value of $_SESSION['."'".$key."'".'] is '."'".$value."'".' <br />';
-}
-
-?>
+ // testing shopping cart array
+//foreach($_SESSION['selectedProduct'] as $key=>$value)
+//{
+//    // and print out the values
+//    echo 'The value of $_SESSION['."'".$key."'".'] is '."'".$value."'".' <br />';
+//}
+//
+//?>
 
 
 <!DOCTYPE html>
@@ -56,11 +56,11 @@ foreach($_SESSION['selectedProduct'] as $key=>$value)
 <body>
 	<div class="top-bar">
 	<!-----logo img---->
-	
+
 	<div class="menu-bar">
 	<ul>
 	<!----<li><img src="shoppingcart.jpg"></li> 要再改--->
-	</ul>	
+	</ul>
 	</div>
 </div>
 <div >

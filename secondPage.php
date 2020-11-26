@@ -38,12 +38,13 @@ else
     if(empty($_SESSION['selectedProduct']))
     $_SESSION['selectedProduct']=array();
 
-if(isset($_SESSION['selectedProduct']))
-foreach($_SESSION['selectedProduct'] as $key=>$value)
-{
-    // and print out the values
-    echo 'The value of $_SESSION['."'".$key."'".'] is '."'".$value."'".' <br />';
-}
+    // Testing shopping cart items array
+//if(isset($_SESSION['selectedProduct']))
+//foreach($_SESSION['selectedProduct'] as $key=>$value)
+//{
+//    // and print out the values
+//    echo 'The value of $_SESSION['."'".$key."'".'] is '."'".$value."'".' <br />';
+//}
 
 ?>
 
@@ -57,14 +58,18 @@ foreach($_SESSION['selectedProduct'] as $key=>$value)
 	<div class="top-bar">
 
 	<div class="logo">
-	<img src="logo.png">
+        <a href="firstPage.php">
+            <img src="logo.png">
+        </a>
+
 	</div>
 	
 	<div class="menu-bar">
 	<nav>
 	<ul>
 		<li> <a href="firstPage.php">Home</a></li>
-		<li><a href="fifthPage.php"> <ion-icon name="cart-outline"></ion-icon> Cart <span>0</span></a></li>
+		<li><a href="fifthPage.php"> <ion-icon name="cart-outline" ></ion-icon> Cart
+                <span id="cartItems"    ><?php echo sizeof($_SESSION['selectedProduct']) ?></php></span></a></li>
 	</ul>
 	</nav>
 	</div>
@@ -83,13 +88,14 @@ foreach($_SESSION['selectedProduct'] as $key=>$value)
         <div class="display-inlineBlock" style="margin: 0px 10% 30px 25%">
             <img src="secondPageFood1.jpg">
             <div class="info">
-                <button> Add to Cart</button>
-                <?php echo "<h2>".$_SESSION['globalProduct'][0][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][0][1]."</h3>"?>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="1">
                     <input type="submit" value="Add to cart">
                 </form>
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][0][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][0][1]."</h3>"?>
+                </div>
             </div>
         </div>
         <div class="display-inlineBlock">
@@ -101,8 +107,8 @@ foreach($_SESSION['selectedProduct'] as $key=>$value)
                 </form>
             </div>
             <div>
-                <?php echo "<h2>".$product[1][0]."</h2>"?>
-                <?php echo "<h3>$".$product[1][1]."</h3>"?>
+                <?php echo "<h2>".$_SESSION['globalProduct'][1][0]."</h2>"?>
+                <?php echo "<h3>$".$_SESSION['globalProduct'][1][1]."</h3>"?>
             </div>
         </div>
     </div>
@@ -178,10 +184,12 @@ foreach($_SESSION['selectedProduct'] as $key=>$value)
 	</div>
 
 </div>
-	<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
 </body>
 
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 <script src="jquery.js"></script>
+
 <script>
     // Testing
     //function addCart(value) {
@@ -200,6 +208,7 @@ foreach($_SESSION['selectedProduct'] as $key=>$value)
     if ( window.history.replaceState ) {
         window.history.replaceState( null, null, window.location.href );
     }
+
 </script>
 
 <style>
