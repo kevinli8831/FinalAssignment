@@ -1,4 +1,5 @@
 <?php
+session_set_cookie_params(0);
 session_start();
 $product=array
 (
@@ -19,21 +20,37 @@ $product=array
     array("melon",100,15),
     array("fish",100,16),
 );
-$selectedProduct=array(1,5);
 $_SESSION['globalProduct']=$product;
-$_SESSION['selectedProduct']=$selectedProduct;
 
+$selectedProduct=array();
+
+if(isset($_POST['value']))
+{
+    $temp=$_POST['value'];
+//    array_push($selectedProduct,$temp);
+
+}
+if(isset($_SESSION['selectedProduct'])&& isset($_POST['value']))
+{
+   array_push($_SESSION['selectedProduct'],$temp);
+}
+else
+    if(empty($_SESSION['selectedProduct']))
+    $_SESSION['selectedProduct']=array();
+
+if(isset($_SESSION['selectedProduct']))
+foreach($_SESSION['selectedProduct'] as $key=>$value)
+{
+    // and print out the values
+    echo 'The value of $_SESSION['."'".$key."'".'] is '."'".$value."'".' <br />';
+}
 
 ?>
-
-
-<!DOCTYPE html>
 
 <html>
 <head>
 <title>secondPage</title>
 </head>
-	
 
 <body>
 	<div class="top-bar">
@@ -45,25 +62,32 @@ $_SESSION['selectedProduct']=$selectedProduct;
 	</ul>	
 	</div>
 </div>
-<div >
+<div>
     <h2 style="text-align: center;">Snacks</h2>
     <div class="row">
         <div class="display-inlineBlock" style="margin: 0px 10% 0px 25%">
             <img src="secondPageFood1.jpg">
             <div class="info">
-                <button> Add to Cart</button>
-                <?php echo "<h3>".$product[0][0]."</h3>"?>
-                <?php echo "<h5>$".$product[0][1]."</h5>"?>
+                <form action="secondPage.php" method="post">
+                    <input type="hidden" name="value" value="1">
+                    <input type="submit" value="Add to cart">
+                </form>
+                <?php echo "<h3>".$_SESSION['globalProduct'][0][0]."</h3>"?>
+                <?php echo "<h5>$".$_SESSION['globalProduct'][0][1]."</h5>"?>
             </div>
         </div>
         <div class="display-inlineBlock">
             <img src="secondPageFood2.jpeg" >
             <div class="info">
-                <button> Add to Cart</button>
+                <form action="secondPage.php" method="post">
+                    <input type="hidden" name="value" value="2">
+                    <input type="submit" value="Add to cart">
+                    <a href="thirdPage.php">3 page</a>
+                </form>
             </div>
             <div>
-                <?php echo "<h3>".$product[1][0]."</h3>"?>
-                <?php echo "<h5>$".$product[1][1]."</h5>"?>
+                <?php echo "<h3>".$_SESSION['globalProduct'][1][0]."</h3>"?>
+                <?php echo "<h5>$".$_SESSION['globalProduct'][1][1]."</h5>"?>
             </div>
         </div>
     </div>
@@ -72,22 +96,28 @@ $_SESSION['selectedProduct']=$selectedProduct;
         <div class="display-inlineBlock"  style="margin: 0px 10% 0px 25%">
             <img src="secondPageFood3.jpg">
             <div class="info">
-                <button> Add to Cart</button>
+                <form action="secondPage.php" method="post">
+                    <input type="hidden" name="value" value="3">
+                    <input type="submit" value="Add to cart">
+                </form>
             </div>
             <div>
-                <h3>Bourbon Cookie</h3>
-                <h5>$303.00</h5>
+                <?php echo "<h3>".$_SESSION['globalProduct'][2][0]."</h3>"?>
+                <?php echo "<h5>$".$_SESSION['globalProduct'][2][1]."</h5>"?>
             </div>
         </div>
 
         <div class="display-inlineBlock">
             <img src="secondPageFood4.jpg">
             <div class="info">
-                <button> Add to Cart</button>
+                <form action="secondPage.php" method="post">
+                    <input type="hidden" name="value" value="4">
+                    <input type="submit" value="Add to cart">
+                </form>
             </div>
             <div>
-                <h3>Bourbon Cookie</h3>
-                <h5>$304.00</h5>
+                <?php echo "<h3>".$_SESSION['globalProduct'][3][0]."</h3>"?>
+                <?php echo "<h5>$".$_SESSION['globalProduct'][3][1]."</h5>"?>
             </div>
         </div>
 
@@ -97,22 +127,28 @@ $_SESSION['selectedProduct']=$selectedProduct;
         <div class="display-inlineBlock"  style="margin: 0px 10% 0px 25%">
             <img src="secondPageFood5.jpg">
             <div class="info">
-                <button> Add to Cart</button>
+                <form action="secondPage.php" method="post">
+                    <input type="hidden" name="value" value="5">
+                    <input type="submit" value="Add to cart">
+                </form>
             </div>
             <div>
-                <h3>Bourbon Cookie</h3>
-                <h5>$2000.00</h5>
+                <?php echo "<h3>".$_SESSION['globalProduct'][4][0]."</h3>"?>
+                <?php echo "<h5>$".$_SESSION['globalProduct'][4][1]."</h5>"?>
             </div>
         </div>
 
         <div class="display-inlineBlock">
             <img src="secondPageFood6.jpg">
             <div class="info">
-                <button> Add to Cart</button>
+                <form action="secondPage.php" method="post">
+                    <input type="hidden" name="value" value="6">
+                    <input type="submit" value="Add to cart">
+                </form>
             </div>
             <div>
-                <h3>Bourbon Cookie</h3>
-                <h5>$100.00</h5>
+                <?php echo "<h3>".$_SESSION['globalProduct'][5][0]."</h3>"?>
+                <?php echo "<h5>$".$_SESSION['globalProduct'][5][1]."</h5>"?>
             </div>
         </div>
 
@@ -120,44 +156,24 @@ $_SESSION['selectedProduct']=$selectedProduct;
 </div>
 </body>
 
-<script src="jquery.js">
-    var xmlhttp;
-    function AJAXData()
-    {
-        xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = HandleData;
-        xmlhttp.open("GET","selectedCart.php", true);
-        xmlhttp.send();
-    }
-
-    function HandleData() {
-        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-
-        }
-    }
-
-
-    function addCart() {
-
-    console.log('hello');
-
-    <?php
-//        $isbn='165463';
-//        $name='Webbasdasdaasdasd123';
-//        $quantity='6';
-//        $insert="INSERT into book values(\"".$isbn."\",\"".$name. "\",\"".$quantity. "\")";
-//        $database=new mysqli("localhost","u1","a1","hkbookshop");
-//
-//        if ($database->connect_error)
-//            die("Could not connect to database:".$database->connect_error);
-//
-//        if($database->query($insert)===TRUE)
-//            print("Record inserted success");
-//        else
-//            die("Could not execute insetion!".mysqli_error($database));
-//
-//        $database->close();
-        ?>
+<script src="jquery.js"></script>
+<script>
+    // Testing
+    //function addCart(value) {
+    //
+    //    <?php
+    //    $isbn='165463';
+    //    $name='Webbasdasdaasdasd123';
+    //    $quantity='123';
+    //    $insert="INSERT into book values(\"".$isbn."\",\"".$name. "\",\"".$quantity. "\")";
+    //    $database=new mysqli("localhost","u1","a1","hkbookshop");
+    //    $database->close();
+    //    ?>
+    //}
+    //
+    // preventing resend the form when f5
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
     }
 </script>
 
