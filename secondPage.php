@@ -9,16 +9,18 @@ $product=array
     array("Calbee Chip",16,4),
     array("Curry Cup Noodle",10,5),
     array("Cheese Curry Cup Noodle",20,6),
-    array("cookie",100,7),
-    array("calbee",100,8),
-    array("cupDoodle",100,9),
-    array("cheese",100,10),
-    array("fishball",100,11),
-    array("icecream",100,12),
-    array("salt",100,13),
-    array("watermelon",100,14),
-    array("melon",100,15),
-    array("fish",100,16),
+    array("Hand Wash",40,7),
+    array("Body Wash",50,8),
+    array("Shampoo",55,9),
+    array("Conditioner",55,10),
+    array("Face Wash",50,11),
+    array("Paper Mask",50,12),
+    array("Green Tea",10,13),
+    array("Red Tea",15,14),
+    array("Coffee",27,15),
+    array("Tomato Juice",14,16),
+    array("Earl Grey Tea",115,17),
+    array("Soy Milk",21,18),
 );
 $_SESSION['globalProduct']=$product;
 
@@ -83,7 +85,6 @@ else
 
 </div>
 <div>
-    <h2 style="text-align: center;">Snacks</h2>
     <div class="row">
         <div class="display-inlineBlock" style="margin: 0px 10% 30px 25%">
             <img src="secondPageFood1.jpg">
