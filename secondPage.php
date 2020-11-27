@@ -182,12 +182,14 @@ else
     </div>
 
 	<div class="previous">
-	<a href="firstPage.php"> <span><ion-icon name="arrow-back-outline"></ion-icon>Previous Page</span></a>
+        <a href="firstPage.php"><i class="fas fa-arrow-circle-left" style="color: black;font-size: 35px"></i></a>
 	</div>
 
-	<div class="next">
-	<a href="thirdPage.php"> <span>Next Page<ion-icon name="arrow-forward-outline"></ion-icon></span></a>
-	</div>
+
+    <div class="next">
+        <a href="thirdPage.php"><i class="fas fa-arrow-circle-right" style="color: black;font-size: 35px"></i></a>
+    </div>
+
 
 </div>
 
@@ -195,7 +197,7 @@ else
 
 <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 <script src="jquery.js"></script>
-
+<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"    ></script>
 <script>
     // Testing
     //function addCart(value) {
@@ -262,22 +264,16 @@ else
 
 	.previous{
 		float: left;
+        margin-left: 20px;
 	}
 	
-	.previous a{
-		padding: 5px;
-		background-color: #fff;
-		text-decoration: none;
-	}
+
 
 	.next{
 		float: right;
+        margin-right: 20px;
 	}
-	.next a{
-		padding: 5px;
-		background-color: #fff;
-		text-decoration: none;
-	}
+
 	.menu-bar li{
 		list-style: none;
 		display: inline-block;
