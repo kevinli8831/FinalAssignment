@@ -84,93 +84,99 @@ else
 </div>
 <div>
     <h2 style="text-align: center;">Snacks</h2>
-    <div class="row">
-        <div class="display-inlineBlock" style="margin: 0px 10% 30px 25%">
-            <img src="secondPageFood1.jpg">
+    <div class="row" >
+        <div class="display-inlineBlock products" >
+            <img src="secondPageFood1.jpg" >
             <div class="info">
-                <form action="secondPage.php" method="post">
-                    <input type="hidden" name="value" value="1">
-                    <input type="submit" value="Add to cart">
-                </form>
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][0][0]."</h2>"?>
                     <?php echo "<h3>$".$_SESSION['globalProduct'][0][1]."</h3>"?>
                 </div>
+                <form action="secondPage.php" method="post">
+                    <input type="hidden" name="value" value="1">
+                    <input type="submit" value="Add to cart">
+                </form>
+
+
             </div>
         </div>
-        <div class="display-inlineBlock">
+        <div class="display-inlineBlock products">
             <img src="secondPageFood2.jpeg" >
             <div class="info">
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][1][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][1][1]."</h3>"?>
+                </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="2">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-            <div>
-                <?php echo "<h2>".$_SESSION['globalProduct'][1][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][1][1]."</h3>"?>
-            </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="display-inlineBlock"  style="margin: 0px 10% 0px 25%">
+        <div class="display-inlineBlock products" >
             <img src="secondPageFood3.jpg">
             <div class="info">
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][2][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][2][1]."</h3>"?>
+                </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="3">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-            <div>
-                <?php echo "<h2>".$_SESSION['globalProduct'][2][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][2][1]."</h3>"?>
-            </div>
+
         </div>
 
-        <div class="display-inlineBlock">
+        <div class="display-inlineBlock products">
             <img src="secondPageFood4.jpg">
             <div class="info">
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][3][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][3][1]."</h3>"?>
+                </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="4">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-            <div>
-                <?php echo "<h2>".$_SESSION['globalProduct'][3][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][3][1]."</h3>"?>
-            </div>
+
         </div>
 
     </div>
 
     <div class="row">
-        <div class="display-inlineBlock"  style="margin: 0px 10% 30px 25%">
+        <div class="display-inlineBlock products"  >
             <img src="secondPageFood5.jpg">
             <div class="info">
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][4][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][4][1]."</h3>"?>
+                </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="5">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-            <div>
-                <?php echo "<h2>".$_SESSION['globalProduct'][4][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][4][1]."</h3>"?>
-            </div>
+
         </div>
 
-        <div class="display-inlineBlock">
+        <div class="display-inlineBlock products">
             <img src="secondPageFood6.jpg">
             <div class="info">
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][5][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][5][1]."</h3>"?>
+                </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="6">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-            <div>
-                <?php echo "<h2>".$_SESSION['globalProduct'][5][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][5][1]."</h3>"?>
-            </div>
+
         </div>
 
     </div>
@@ -292,8 +298,21 @@ else
 	img {
 	width: 300px;
 	height: 300px;
+        margin-bottom: 10px;
 	}
-		
+
+    .products{
+
+        padding: 10px;
+        background-color: cornsilk;
+        border-radius: 15px;
+        border: 5px solid #AF7255;
+    }
+    .row {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 30px;
+    }
 </style>
 
 </html>
