@@ -85,104 +85,111 @@ else
 
 </div>
 <div>
-    <div class="row">
-        <div class="display-inlineBlock" style="margin: 0px 10% 30px 25%">
-            <img src="FourthPageDrink1.jpg">
+    <h2 style="text-align: center;">Drink</h2>
+    <div class="row" >
+        <div class="display-inlineBlock products" >
+            <img src="FourthPageDrink1.jpg" >
             <div class="info">
-                <form action="fourthPage.php" method="post">
-                    <input type="hidden" name="value" value="13">
-                    <input type="submit" value="Add to cart">
-                </form>
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][12][0]."</h2>"?>
                     <?php echo "<h3>$".$_SESSION['globalProduct'][12][1]."</h3>"?>
                 </div>
+                <form action="fourthPage.php" method="post">
+                    <input type="hidden" name="value" value="13">
+                    <input type="submit" value="Add to cart">
+                </form>
             </div>
         </div>
-        <div class="display-inlineBlock">
+        <div class="display-inlineBlock products">
             <img src="FourthPageDrink2.jpg" >
             <div class="info">
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][13][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][13][1]."</h3>"?>
+                </div>
                 <form action="fourthPage.php" method="post">
                     <input type="hidden" name="value" value="14">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-            <div>
-                <?php echo "<h2>".$_SESSION['globalProduct'][13][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][13][1]."</h3>"?>
-            </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="display-inlineBlock"  style="margin: 0px 10% 0px 25%">
-            <img src="FourthPageDrink3.jpg">
+        <div class="display-inlineBlock products" >
+            <img src="FourthPageDrink4.jpg">
             <div class="info">
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][14][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][14][1]."</h3>"?>
+                </div>
                 <form action="fourthPage.php" method="post">
                     <input type="hidden" name="value" value="15">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-            <div>
-                <?php echo "<h2>".$_SESSION['globalProduct'][14][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][14][1]."</h3>"?>
-            </div>
+
         </div>
 
-        <div class="display-inlineBlock">
+        <div class="display-inlineBlock products">
             <img src="FourthPageDrink4.jpg">
             <div class="info">
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][15][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][15][1]."</h3>"?>
+                </div>
                 <form action="fourthPage.php" method="post">
                     <input type="hidden" name="value" value="16">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-            <div>
-                <?php echo "<h2>".$_SESSION['globalProduct'][15][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][15][1]."</h3>"?>
-            </div>
+
         </div>
 
     </div>
 
     <div class="row">
-        <div class="display-inlineBlock"  style="margin: 0px 10% 30px 25%">
+        <div class="display-inlineBlock products"  >
             <img src="FourthPageDrink5.jpg">
             <div class="info">
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][16][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][16][1]."</h3>"?>
+                </div>
                 <form action="fourthPage.php" method="post">
                     <input type="hidden" name="value" value="17">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-            <div>
-                <?php echo "<h2>".$_SESSION['globalProduct'][16][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][16][1]."</h3>"?>
-            </div>
+
         </div>
 
-        <div class="display-inlineBlock">
+        <div class="display-inlineBlock products">
             <img src="FourthPageDrink6.jpg">
             <div class="info">
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][17][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][17][1]."</h3>"?>
+                </div>
                 <form action="fourthPage.php" method="post">
                     <input type="hidden" name="value" value="18">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-            <div>
-                <?php echo "<h2>".$_SESSION['globalProduct'][17][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][17][1]."</h3>"?>
-            </div>
+
         </div>
 
     </div>
 
     <div class="previous">
-    <a href="thirdPage.php"> <span><ion-icon name="arrow-back-outline"></ion-icon>Previous Page</span></a>
+        <a href="thirdPage.php"><i class="fas fa-arrow-circle-left" style="color: black;font-size: 35px"></i></a>
     </div>
 
+
     <div class="next">
-    <a href="fifthPage.php"> <span>Next Page<ion-icon name="arrow-forward-outline"></ion-icon></span></a>
+        <a href="fifthPage.php"><i class="fas fa-arrow-circle-right" style="color: black;font-size: 35px"></i></a>
     </div>
+
 
 </div>
 
@@ -190,7 +197,7 @@ else
 
 <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 <script src="jquery.js"></script>
-
+<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"    ></script>
 <script>
     // Testing
     //function addCart(value) {
@@ -257,22 +264,16 @@ else
 
     .previous{
         float: left;
+        margin-left: 20px;
     }
     
-    .previous a{
-        padding: 5px;
-        background-color: #fff;
-        text-decoration: none;
-    }
+
 
     .next{
         float: right;
+        margin-right: 20px;
     }
-    .next a{
-        padding: 5px;
-        background-color: #fff;
-        text-decoration: none;
-    }
+
     .menu-bar li{
         list-style: none;
         display: inline-block;
@@ -293,8 +294,21 @@ else
     img {
     width: 300px;
     height: 300px;
+        margin-bottom: 10px;
     }
-        
+
+    .products{
+
+        padding: 10px;
+        background-color: cornsilk;
+        border-radius: 15px;
+        border: 5px solid #AF7255;
+    }
+    .row {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 30px;
+    }
 </style>
 
 </html>

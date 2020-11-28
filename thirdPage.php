@@ -85,104 +85,111 @@ else
 
 </div>
 <div>
-    <div class="row">
-        <div class="display-inlineBlock" style="margin: 0px 10% 30px 25%">
-            <img src="ThirdPageDaily1.jpg">
+    <h2 style="text-align: center;">Daily Consumables</h2>
+    <div class="row" >
+        <div class="display-inlineBlock products" >
+            <img src="ThirdPageDaily1.jpg" >
             <div class="info">
-                <form action="thirdPage.php" method="post">
-                    <input type="hidden" name="value" value="7">
-                    <input type="submit" value="Add to cart">
-                </form>
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][6][0]."</h2>"?>
                     <?php echo "<h3>$".$_SESSION['globalProduct'][6][1]."</h3>"?>
                 </div>
+                <form action="thirdPage.php" method="post">
+                    <input type="hidden" name="value" value="7">
+                    <input type="submit" value="Add to cart">
+                </form>
             </div>
         </div>
-        <div class="display-inlineBlock">
+        <div class="display-inlineBlock products">
             <img src="ThirdPageDaily2.jpg" >
             <div class="info">
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][7][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][7][1]."</h3>"?>
+                </div>
                 <form action="thirdPage.php" method="post">
                     <input type="hidden" name="value" value="8">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-            <div>
-                <?php echo "<h2>".$_SESSION['globalProduct'][7][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][7][1]."</h3>"?>
-            </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="display-inlineBlock"  style="margin: 0px 10% 0px 25%">
+        <div class="display-inlineBlock products" >
             <img src="ThirdPageDaily3.jpg">
             <div class="info">
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][8][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][8][1]."</h3>"?>
+                </div>
                 <form action="thirdPage.php" method="post">
                     <input type="hidden" name="value" value="9">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-            <div>
-                <?php echo "<h2>".$_SESSION['globalProduct'][8][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][8][1]."</h3>"?>
-            </div>
+
         </div>
 
-        <div class="display-inlineBlock">
+        <div class="display-inlineBlock products">
             <img src="ThirdPageDaily4.jpg">
             <div class="info">
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][9][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][9][1]."</h3>"?>
+                </div>
                 <form action="thirdPage.php" method="post">
                     <input type="hidden" name="value" value="10">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-            <div>
-                <?php echo "<h2>".$_SESSION['globalProduct'][9][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][9][1]."</h3>"?>
-            </div>
+
         </div>
 
     </div>
 
     <div class="row">
-        <div class="display-inlineBlock"  style="margin: 0px 10% 30px 25%">
+        <div class="display-inlineBlock products"  >
             <img src="ThirdPageDaily5.jpg">
             <div class="info">
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][10][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][10][1]."</h3>"?>
+                </div>
                 <form action="thirdPage.php" method="post">
                     <input type="hidden" name="value" value="11">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-            <div>
-                <?php echo "<h2>".$_SESSION['globalProduct'][10][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][10][1]."</h3>"?>
-            </div>
+
         </div>
 
-        <div class="display-inlineBlock">
+        <div class="display-inlineBlock products">
             <img src="ThirdPageDaily6.jpg">
             <div class="info">
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][11][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][11][1]."</h3>"?>
+                </div>
                 <form action="thirdPage.php" method="post">
                     <input type="hidden" name="value" value="12">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-            <div>
-                <?php echo "<h2>".$_SESSION['globalProduct'][11][0]."</h2>"?>
-                <?php echo "<h3>$".$_SESSION['globalProduct'][11][1]."</h3>"?>
-            </div>
+
         </div>
 
     </div>
 
     <div class="previous">
-    <a href="secondPage.php"> <span><ion-icon name="arrow-back-outline"></ion-icon>Previous Page</span></a>
+        <a href="secondPage.php"><i class="fas fa-arrow-circle-left" style="color: black;font-size: 35px"></i></a>
     </div>
 
+
     <div class="next">
-    <a href="fourthPage.php"> <span>Next Page<ion-icon name="arrow-forward-outline"></ion-icon></span></a>
+        <a href="fourthPage.php"><i class="fas fa-arrow-circle-right" style="color: black;font-size: 35px"></i></a>
     </div>
+
 
 </div>
 
@@ -190,7 +197,7 @@ else
 
 <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 <script src="jquery.js"></script>
-
+<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"    ></script>
 <script>
     // Testing
     //function addCart(value) {
@@ -257,22 +264,16 @@ else
 
     .previous{
         float: left;
+        margin-left: 20px;
     }
     
-    .previous a{
-        padding: 5px;
-        background-color: #fff;
-        text-decoration: none;
-    }
+
 
     .next{
         float: right;
+        margin-right: 20px;
     }
-    .next a{
-        padding: 5px;
-        background-color: #fff;
-        text-decoration: none;
-    }
+
     .menu-bar li{
         list-style: none;
         display: inline-block;
@@ -293,8 +294,21 @@ else
     img {
     width: 300px;
     height: 300px;
+        margin-bottom: 10px;
     }
-        
+
+    .products{
+
+        padding: 10px;
+        background-color: cornsilk;
+        border-radius: 15px;
+        border: 5px solid #AF7255;
+    }
+    .row {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 30px;
+    }
 </style>
 
 </html>
