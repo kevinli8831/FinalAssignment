@@ -85,7 +85,6 @@ else
 
 </div>
 <div>
-    <h2 style="text-align: center;">Snacks</h2>
     <div class="row" >
         <div class="display-inlineBlock products" >
             <img src="secondPageFood1.jpg" >
@@ -266,8 +265,6 @@ else
 		float: left;
         margin-left: 20px;
 	}
-	
-
 
 	.next{
 		float: right;
