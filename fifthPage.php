@@ -52,8 +52,10 @@ session_start();
         echo '<span style="color: #E5483F">'.'$'.$_SESSION['totalPrice'].'</span><br>';
         ?>
     </div>
-	<div class="pay"> 
-	<input type="submit" value="Pay">
+	<div class="pay">
+        <form action="sixthPage.php" method="post">
+            <input type="submit" value="pay" name="pay">
+        </form>
         <form action="fifthPage.php" method="post">
 
             <?php
