@@ -15,14 +15,16 @@ session_start();
     <h1>Shopping Cart <?php echo sizeof($_SESSION['selectedProduct']) ?> items</h1>
 
     <?php
-    foreach($_SESSION['selectedProduct'] as $key=>$value)
+    for($i=0;$i<sizeof($_SESSION['globalProduct']);$i++)
     {
-        if ($_SESSION['globalProduct'][$key][2]==$value)
+        for($a=0;$a<sizeof($_SESSION['selectedProduct']);$a++)
         {
-            echo '<div class="row">';
-         echo '<span style="display: inline-block;min-width: 320px">'.$_SESSION['globalProduct'][$key][0].'</span>';
-          echo "<span style='color: #E5483F'>".'$'.$_SESSION['globalProduct'][$key][1].'</span><br>';
-        echo '<hr></div>';
+            if ($_SESSION['selectedProduct'][$a]==$_SESSION['globalProduct'][$i][2]){
+                echo '<div class="row">';
+                echo '<span style="display: inline-block;min-width: 320px">'.$_SESSION['globalProduct'][$i][0].'</span>';
+                echo "<span style='color: #E5483F'>".'$'.$_SESSION['globalProduct'][$i][1].'</span><br>';
+                echo '<hr></div>';
+            }
         }
     }
     ?>
@@ -30,14 +32,16 @@ session_start();
         <span style="display: inline-block;min-width: 316px">Total Money:</span>
         <?php
         $temp=0;
-        foreach ($_SESSION['selectedProduct'] as $key=>$value)
+        for($i=0;$i<sizeof($_SESSION['globalProduct']);$i++)
         {
-            if ($_SESSION['globalProduct'][$key][2]==$value)
-            {
-                $temp=$temp+$_SESSION['globalProduct'][$key][1];
+         for($a=0;$a<sizeof($_SESSION['selectedProduct']);$a++)
+        {
+            if ($_SESSION['selectedProduct'][$a]==$_SESSION['globalProduct'][$i][2])
+           $temp=$temp+$_SESSION['globalProduct'][$i][1];
             }
         }
-        echo '<span style="color: #E5483F">'.'$'.$temp.'</span>';
+        $_SESSION['totalPrice']=$temp;
+        echo '<span style="color: #E5483F">'.'$'.$_SESSION['totalPrice'].'</span><br>';
         ?>
     </div>
 </div>
