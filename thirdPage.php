@@ -168,7 +168,7 @@ else
     </div>
 
     <div class="previous">
-        <a href="secondPage.phpPage.php"><i class="fas fa-arrow-circle-left" style="color: black;font-size: 35px"></i></a>
+        <a href="secondPage.php"><i class="fas fa-arrow-circle-left" style="color: black;font-size: 35px"></i></a>
     </div>
 
 

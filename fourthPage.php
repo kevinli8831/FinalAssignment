@@ -168,12 +168,12 @@ else
     </div>
 
     <div class="previous">
-        <a href="secondPage.phpPage.php"><i class="fas fa-arrow-circle-left" style="color: black;font-size: 35px"></i></a>
+        <a href="thirdPage.php"><i class="fas fa-arrow-circle-left" style="color: black;font-size: 35px"></i></a>
     </div>
 
 
     <div class="next">
-        <a href="fourthPage.php"><i class="fas fa-arrow-circle-right" style="color: black;font-size: 35px"></i></a>
+        <a href="fifthPage.php"><i class="fas fa-arrow-circle-right" style="color: black;font-size: 35px"></i></a>
     </div>
 
 
