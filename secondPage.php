@@ -29,7 +29,6 @@ $selectedProduct=array();
 if(isset($_POST['value']))
 {
     $temp=$_POST['value'];
-//    array_push($selectedProduct,$temp);
 
 }
 if(isset($_SESSION['selectedProduct'])&& isset($_POST['value']))
@@ -39,14 +38,6 @@ if(isset($_SESSION['selectedProduct'])&& isset($_POST['value']))
 else
     if(empty($_SESSION['selectedProduct']))
         $_SESSION['selectedProduct']=array();
-
-// Testing shopping cart items array
-//if(isset($_SESSION['selectedProduct']))
-//foreach($_SESSION['selectedProduct'] as $key=>$value)
-//{
-//    // and print out the values
-//    echo 'The value of $_SESSION['."'".$key."'".'] is '."'".$value."'".' <br />';
-//}
 
 ?>
 
@@ -67,8 +58,8 @@ else
     </div>
     <div class="menu">
         <a href="firstPage.php" style="color: #ffc111;font-size: 25px;text-decoration: none">Home</a>
-        <a href="fifthPage.php" class="cart"> <ion-icon name="cart-outline" style="font-size: 25px;align-self: end;" ></ion-icon>
-           <span id="cartItems" > Cart<?php echo sizeof($_SESSION['selectedProduct']) ?></php></span></a>
+        <a href="fifthPage.php" class="cart"><ion-icon name="cart-outline" style="font-size: 25px;align-self: end;" ></ion-icon>
+            &nbsp;<span id="cartItems" > Cart <?php echo sizeof($_SESSION['selectedProduct']) ?></php></span></a>
     </div>
 
 
@@ -91,7 +82,7 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="1">
-                    <input type="submit" class="button" value="Add to cart">
+                    <input  type="submit" class="button myMOUSE" value="Add to cart">
                 </form>
             </div>
         </div>
@@ -104,7 +95,7 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="2">
-                    <input type="submit" class="button" value="Add to cart">
+                    <input type="submit" class="button myMOUSE" value="Add to cart">
                 </form>
             </div>
         </div>
@@ -120,7 +111,7 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="3">
-                    <input type="submit" class="button" value="Add to cart">
+                    <input type="submit" class="button myMOUSE" value="Add to cart">
                 </form>
             </div>
 
@@ -135,7 +126,7 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="4">
-                    <input type="submit" class="button" value="Add to cart">
+                    <input type="submit" class="button myMOUSE" value="Add to cart">
                 </form>
             </div>
 
@@ -152,8 +143,8 @@ else
                     <?php echo "<h3>$".$_SESSION['globalProduct'][4][1]."</h3>"?>
                 </div>
                 <form action="secondPage.php" method="post">
-                    <input type="hidden" name="value" value="5">
-                    <input type="submit" class="button" value="Add to cart">
+                    <input  type="hidden" name="value" value="5">
+                    <input type="submit" class="button myMOUSE" value="Add to cart">
                 </form>
             </div>
 
@@ -168,7 +159,7 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="6">
-                    <input type="submit" class="button" value="Add to cart">
+                    <input type="submit" class="button myMOUSE" value="Add to cart">
                 </form>
             </div>
 
@@ -293,7 +284,9 @@ else
         padding-right: 10px;
         padding-left: 10px;
     }
-
+    .myMOUSE {
+        cursor: pointer;
+    }
     .menu-bar spna{
         padding-left: 5px;
     }
