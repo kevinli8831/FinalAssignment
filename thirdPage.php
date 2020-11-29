@@ -85,32 +85,31 @@ else
 
 </div>
 <div>
-    <h2 style="text-align: center;">Daily Consumables</h2>
-    <div class="row" >
+    <div class="row">
         <div class="display-inlineBlock products" >
-            <img src="ThirdPageDaily1.jpg" >
+            <img src="ThirdPageDaily1.jpg">
             <div class="info">
-                <div>
-                    <?php echo "<h2>".$_SESSION['globalProduct'][6][0]."</h2>"?>
-                    <?php echo "<h3>$".$_SESSION['globalProduct'][6][1]."</h3>"?>
-                </div>
                 <form action="thirdPage.php" method="post">
                     <input type="hidden" name="value" value="7">
                     <input type="submit" value="Add to cart">
                 </form>
+                <div>
+                    <?php echo "<h2>".$_SESSION['globalProduct'][6][0]."</h2>"?>
+                    <?php echo "<h3>$".$_SESSION['globalProduct'][6][1]."</h3>"?>
+                </div>
             </div>
         </div>
-        <div class="display-inlineBlock products">
+        <div class="display-inlineBlock products" >
             <img src="ThirdPageDaily2.jpg" >
             <div class="info">
-                <div>
-                    <?php echo "<h2>".$_SESSION['globalProduct'][7][0]."</h2>"?>
-                    <?php echo "<h3>$".$_SESSION['globalProduct'][7][1]."</h3>"?>
-                </div>
                 <form action="thirdPage.php" method="post">
                     <input type="hidden" name="value" value="8">
                     <input type="submit" value="Add to cart">
                 </form>
+            </div>
+            <div>
+                <?php echo "<h2>".$_SESSION['globalProduct'][7][0]."</h2>"?>
+                <?php echo "<h3>$".$_SESSION['globalProduct'][7][1]."</h3>"?>
             </div>
         </div>
     </div>
@@ -119,77 +118,71 @@ else
         <div class="display-inlineBlock products" >
             <img src="ThirdPageDaily3.jpg">
             <div class="info">
-                <div>
-                    <?php echo "<h2>".$_SESSION['globalProduct'][8][0]."</h2>"?>
-                    <?php echo "<h3>$".$_SESSION['globalProduct'][8][1]."</h3>"?>
-                </div>
                 <form action="thirdPage.php" method="post">
                     <input type="hidden" name="value" value="9">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-
+            <div>
+                <?php echo "<h2>".$_SESSION['globalProduct'][8][0]."</h2>"?>
+                <?php echo "<h3>$".$_SESSION['globalProduct'][8][1]."</h3>"?>
+            </div>
         </div>
 
-        <div class="display-inlineBlock products">
+        <div class="display-inlineBlock products" >
             <img src="ThirdPageDaily4.jpg">
             <div class="info">
-                <div>
-                    <?php echo "<h2>".$_SESSION['globalProduct'][9][0]."</h2>"?>
-                    <?php echo "<h3>$".$_SESSION['globalProduct'][9][1]."</h3>"?>
-                </div>
                 <form action="thirdPage.php" method="post">
                     <input type="hidden" name="value" value="10">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-
+            <div>
+                <?php echo "<h2>".$_SESSION['globalProduct'][9][0]."</h2>"?>
+                <?php echo "<h3>$".$_SESSION['globalProduct'][9][1]."</h3>"?>
+            </div>
         </div>
 
     </div>
 
     <div class="row">
-        <div class="display-inlineBlock products"  >
+        <div class="display-inlineBlock products" >
             <img src="ThirdPageDaily5.jpg">
             <div class="info">
-                <div>
-                    <?php echo "<h2>".$_SESSION['globalProduct'][10][0]."</h2>"?>
-                    <?php echo "<h3>$".$_SESSION['globalProduct'][10][1]."</h3>"?>
-                </div>
                 <form action="thirdPage.php" method="post">
                     <input type="hidden" name="value" value="11">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-
+            <div>
+                <?php echo "<h2>".$_SESSION['globalProduct'][10][0]."</h2>"?>
+                <?php echo "<h3>$".$_SESSION['globalProduct'][10][1]."</h3>"?>
+            </div>
         </div>
 
-        <div class="display-inlineBlock products">
+        <div class="display-inlineBlock products" >
             <img src="ThirdPageDaily6.jpg">
             <div class="info">
-                <div>
-                    <?php echo "<h2>".$_SESSION['globalProduct'][11][0]."</h2>"?>
-                    <?php echo "<h3>$".$_SESSION['globalProduct'][11][1]."</h3>"?>
-                </div>
                 <form action="thirdPage.php" method="post">
                     <input type="hidden" name="value" value="12">
                     <input type="submit" value="Add to cart">
                 </form>
             </div>
-
+            <div>
+                <?php echo "<h2>".$_SESSION['globalProduct'][11][0]."</h2>"?>
+                <?php echo "<h3>$".$_SESSION['globalProduct'][11][1]."</h3>"?>
+            </div>
         </div>
 
     </div>
 
     <div class="previous">
-        <a href="secondPage.php"><i class="fas fa-arrow-circle-left" style="color: black;font-size: 35px"></i></a>
+    <a href="secondPage.php"> <i class="fas fa-arrow-circle-left" style="color: black;font-size: 35px"></i></a>
     </div>
-
 
     <div class="next">
-        <a href="fourthPage.php"><i class="fas fa-arrow-circle-right" style="color: black;font-size: 35px"></i></a>
+    <a href="fourthPage.php"> <i class="fas fa-arrow-circle-right" style="color: black;font-size: 35px"></i></a>
     </div>
-
 
 </div>
 
@@ -220,82 +213,80 @@ else
 </script>
 
 <style>
-    body{
-        background-image: url("background.jpg");
-        background-size: auto;
-        }
+	body{
+		background-image: url("background.jpg");
+		background-size: auto;
+		}
 
     .display-inlineBlock{
         display: inline-block;
-        background-color: #fff;
+		background-color: #fff;
     }
-    .top-bar{
-    height: 70px;
-    margin-bottom: -35px;
-    border-bottom: 3px solid orange;
-    }
-
-    .logo img{
-        width: 160px;
-        height: 70px;
-        float: left;
-    }
-    .menu-bar {
-        float: right;
-    }
-    .menu-bar ico-icon{
-        vertical-align: bottom;
-        font-size: 20px;
-        float: right;
+	.top-bar{
+	height: 70px;
+	margin-bottom: -35px;
+	border-bottom: 3px solid orange;
     }
 
-    .header{
-        display: flex;
-        justify-content: center;
-        color: white;
-        font-size: 40px;
-    }
-    
-    .header p{
-        display: block;
-        padding:5px;
-        background-color: orange;
-    }
+	.logo img{
+		width: 160px;
+		height: 70px;
+		float: left;
+	}
+	.menu-bar {
+		float: right;
+	}
+	.menu-bar ico-icon{
+		vertical-align: bottom;
+		font-size: 20px;
+		float: right;
+	}
 
-    .previous{
-        float: left;
+	.header{
+		display: flex;
+		justify-content: center;
+		color: white;
+		font-size: 40px;
+	}
+	
+	.header p{
+		display: block;
+		padding:5px;
+		background-color: orange;
+	}
+
+	.previous{
+		float: left;
         margin-left: 20px;
-    }
-    
+	}
 
-
-    .next{
-        float: right;
+	.next{
+		float: right;
         margin-right: 20px;
-    }
+	}
 
-    .menu-bar li{
-        list-style: none;
-        display: inline-block;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-    
-    .menu-bar spna{
-        padding-left: 5px;
-    }
+	.menu-bar li{
+		list-style: none;
+		display: inline-block;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	
+	.menu-bar spna{
+		padding-left: 5px;
+	}
 
-    .menu-bar a{
-        padding: 5px;
-        background-color: #fff;
-        text-decoration: none;
-    }
+	.menu-bar a{
+		padding: 5px;
+		background-color: #fff;
+		text-decoration: none;
+	}
 
-    img {
-    width: 300px;
-    height: 300px;
+	img {
+	width: 300px;
+	height: 300px;
         margin-bottom: 10px;
-    }
+	}
 
     .products{
 
@@ -309,6 +300,7 @@ else
         justify-content: space-evenly;
         margin-bottom: 30px;
     }
+        
 </style>
 
 </html>
