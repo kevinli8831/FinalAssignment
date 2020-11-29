@@ -61,7 +61,11 @@ session_start();
             $reset=$_POST['reset'];
 
             if(isset($reset))
+            {
                 session_destroy();
+                header('Location:fifthPage.php');
+            }
+
             ?>
             <input type="hidden" name="reset" value="reset">
             <input type="submit" value="reset" name="reset" >
