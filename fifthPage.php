@@ -28,6 +28,8 @@ session_start();
         {
             if ($_SESSION['selectedProduct'][$a]==$_SESSION['globalProduct'][$i][2]){
                 echo '<div class="row">';
+                $photo=$_SESSION['globalProduct'][$i][2];
+                echo '<img class="imgSize" src="' . $photo . '.jpg">';
                 echo '<span style="display: inline-block;min-width: 320px">'.$_SESSION['globalProduct'][$i][0].'</span>';
                 echo "<span style='color: #E5483F'>".'$'.$_SESSION['globalProduct'][$i][1].'</span><br>';
                 echo '<hr></div>';
@@ -85,7 +87,10 @@ session_start();
         border-radius: 15px;
         border: 5px solid #AF7255;
 	}
-	
+	.imgSize{
+        width: 100px;
+        height: 100px;
+    }
 	body{
 		background-image: url("background.jpg");
 		background-size: auto;

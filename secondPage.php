@@ -87,7 +87,7 @@ else
             </div>
         </div>
         <div class="display-inlineBlock products">
-            <img src="secondPageFood2.jpeg" >
+            <img src="secondPageFood2.jpg" >
             <div class="info">
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][1][0]."</h2>"?>
@@ -253,6 +253,8 @@ else
         margin: 5px 0px;
     }
     .button{
+        width: 105px;
+        height: 35px;
         border-radius: 10px;
         border-color: #AF7255;
     }
@@ -286,6 +288,9 @@ else
     }
     .myMOUSE {
         cursor: pointer;
+    }
+    .myMOUSE:hover {
+       background-color: coral;
     }
     .menu-bar spna{
         padding-left: 5px;
