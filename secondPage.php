@@ -58,7 +58,6 @@ else
 <body>
 
 	<div class="top-bar">
-
 	<div class="logo">
         <a href="firstPage.php">
             <img src="logo.png">
@@ -75,15 +74,15 @@ else
 	</ul>
 	</nav>
 	</div>
+
 	</div>
 
-<div >
+   <div class="header">
+       <div class="title">
+           Snacks
+       </div>
+   </div>
 
-	<div class="header">
-    <p><b>Snacks</b></p>
-	</div>
-
-</div>
 <div>
     <div class="row" >
         <div class="display-inlineBlock products" >
@@ -222,16 +221,15 @@ else
 	body{
 		background-image: url("background.jpg");
 		background-size: auto;
+        margin: 0px;
 		}
-
     .display-inlineBlock{
         display: inline-block;
 		background-color: #fff;
     }
 	.top-bar{
-	height: 70px;
-	margin-bottom: -35px;
-	border-bottom: 3px solid orange;
+	    height: 70px;
+        border-bottom: 3px solid orange;
     }
 
 	.logo img{
@@ -247,18 +245,17 @@ else
 		font-size: 20px;
 		float: right;
 	}
-
-	.header{
-		display: flex;
-		justify-content: center;
+    .header{
+        text-align: center;
+        margin: 5px 0px;
+    }
+	.title{
 		color: white;
+       text-align: center;
+        display: inline-block;
+        padding: 0px 5px;
 		font-size: 40px;
-	}
-	
-	.header p{
-		display: block;
-		padding:5px;
-		background-color: orange;
+        background-color: orange;
 	}
 
 	.previous{
@@ -291,7 +288,6 @@ else
 	img {
 	width: 300px;
 	height: 300px;
-        margin-bottom: 10px;
 	}
 
     .products{
