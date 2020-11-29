@@ -11,7 +11,7 @@ $price=0;
 $id=0;
 
 $connect = new mysqli($servername, $username, $password);
-$connectDB = new mysqli($servername, $username, $password,$dbname);
+
 
 $sql = "CREATE DATABASE jp";
 // 本身佢無DB 就會CREATE
@@ -22,6 +22,7 @@ if ($connect->query($sql) === TRUE) {
             price INT(30),
             id INT(30)
             )";
+    $connectDB = new mysqli($servername, $username, $password,$dbname);
 
     if ($connectDB->query($sql) === TRUE) {
         echo "Table product created successfully";
@@ -76,6 +77,7 @@ else {
         echo "deleted DATABASE jp"."<br>";
         $sql = "CREATE DATABASE jp";
 
+
         if ($connect->query($sql) === TRUE){
             echo "Created DATABASE jp";
             $sql = "CREATE TABLE product (
@@ -83,6 +85,8 @@ else {
                     price INT(30),
                     id INT(30)
                     )";
+            $connectDB = new mysqli($servername, $username, $password,$dbname);
+
             if ($connectDB->query($sql) === TRUE) {
                 echo "Table product created successfully";
                 if(isset($_POST['pay']))
