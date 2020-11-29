@@ -44,14 +44,29 @@ session_start();
         echo '<span style="color: #E5483F">'.'$'.$_SESSION['totalPrice'].'</span><br>';
         ?>
     </div>
+	<div class="pay"> 
+	<input type="submit" value="Pay">
+	<input type="reset" value="Reset">
 </div>
 
 
 </body>
 
 <style>
-.container{
+	.container{
     margin: 0px 25%;
-}
+	padding: 10px;
+        background-color: cornsilk;
+        border-radius: 15px;
+        border: 5px solid #AF7255;
+	}
+	
+	body{
+		background-image: url("background.jpg");
+		background-size: auto;
+		}
+		
+	
+	
 </style>
 </html>
