@@ -12,9 +12,16 @@ session_start();
 
 <body>
 <div class="container">
-    <h1>Shopping Cart <?php echo sizeof($_SESSION['selectedProduct']) ?> items</h1>
+    <h1>Shopping Cart <?php
+        if (isset($_SESSION['selectedProduct']))
+        echo sizeof($_SESSION['selectedProduct']);
+        else
+            echo '0';
+        ?>
+        items</h1>
 
     <?php
+    if(isset($_SESSION['globalProduct'])&&$_SESSION['selectedProduct'])
     for($i=0;$i<sizeof($_SESSION['globalProduct']);$i++)
     {
         for($a=0;$a<sizeof($_SESSION['selectedProduct']);$a++)
@@ -32,6 +39,7 @@ session_start();
         <span style="display: inline-block;min-width: 316px">Total Money:</span>
         <?php
         $temp=0;
+        if (isset($_SESSION['globalProduct'])&&$_SESSION['selectedProduct'] )
         for($i=0;$i<sizeof($_SESSION['globalProduct']);$i++)
         {
          for($a=0;$a<sizeof($_SESSION['selectedProduct']);$a++)
@@ -46,7 +54,18 @@ session_start();
     </div>
 	<div class="pay"> 
 	<input type="submit" value="Pay">
-	<input type="reset" value="Reset">
+        <form action="fifthPage.php" method="post">
+
+            <?php
+            if (isset($_POST['reset']))
+            $reset=$_POST['reset'];
+
+            if(isset($reset))
+                session_destroy();
+            ?>
+            <input type="hidden" name="reset" value="reset">
+            <input type="submit" value="reset" name="reset" >
+        </form>
 </div>
 
 

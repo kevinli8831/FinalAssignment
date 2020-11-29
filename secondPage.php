@@ -34,13 +34,13 @@ if(isset($_POST['value']))
 }
 if(isset($_SESSION['selectedProduct'])&& isset($_POST['value']))
 {
-   array_push($_SESSION['selectedProduct'],$temp);
+    array_push($_SESSION['selectedProduct'],$temp);
 }
 else
     if(empty($_SESSION['selectedProduct']))
-    $_SESSION['selectedProduct']=array();
+        $_SESSION['selectedProduct']=array();
 
-    // Testing shopping cart items array
+// Testing shopping cart items array
 //if(isset($_SESSION['selectedProduct']))
 //foreach($_SESSION['selectedProduct'] as $key=>$value)
 //{
@@ -52,36 +52,33 @@ else
 
 <html>
 <head>
-<title>secondPage</title>
+    <title>secondPage</title>
 </head>
 
 <body>
 
-	<div class="top-bar">
-	<div class="logo">
+<div class="top-bar" >
+    <div class="logo">
         <a href="firstPage.php">
-            <img src="logo.png">
+            <img src="logo2.png">
         </a>
 
-	</div>
-	
-	<div class="menu-bar">
-	<nav>
-	<ul>
-		<li> <a href="firstPage.php">Home</a></li>
-		<li><a href="fifthPage.php"> <ion-icon name="cart-outline" ></ion-icon> Cart
-                <span id="cartItems"    ><?php echo sizeof($_SESSION['selectedProduct']) ?></php></span></a></li>
-	</ul>
-	</nav>
-	</div>
 
-	</div>
+    </div>
+    <div class="menu">
+        <a href="firstPage.php" style="color: #ffc111;font-size: 25px;text-decoration: none">Home</a>
+        <a href="fifthPage.php" class="cart"> <ion-icon name="cart-outline" style="font-size: 25px;align-self: end;" ></ion-icon>
+           <span id="cartItems" > Cart<?php echo sizeof($_SESSION['selectedProduct']) ?></php></span></a>
+    </div>
 
-   <div class="header">
-       <div class="title">
-           Snacks
-       </div>
-   </div>
+
+</div>
+
+<div class="header">
+    <div class="title">
+        Snacks
+    </div>
+</div>
 
 <div>
     <div class="row" >
@@ -94,7 +91,7 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="1">
-                    <input type="submit" value="Add to cart">
+                    <input type="submit" class="button" value="Add to cart">
                 </form>
             </div>
         </div>
@@ -107,7 +104,7 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="2">
-                    <input type="submit" value="Add to cart">
+                    <input type="submit" class="button" value="Add to cart">
                 </form>
             </div>
         </div>
@@ -123,7 +120,7 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="3">
-                    <input type="submit" value="Add to cart">
+                    <input type="submit" class="button" value="Add to cart">
                 </form>
             </div>
 
@@ -138,7 +135,7 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="4">
-                    <input type="submit" value="Add to cart">
+                    <input type="submit" class="button" value="Add to cart">
                 </form>
             </div>
 
@@ -156,7 +153,7 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="5">
-                    <input type="submit" value="Add to cart">
+                    <input type="submit" class="button" value="Add to cart">
                 </form>
             </div>
 
@@ -171,7 +168,7 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="6">
-                    <input type="submit" value="Add to cart">
+                    <input type="submit" class="button" value="Add to cart">
                 </form>
             </div>
 
@@ -179,9 +176,9 @@ else
 
     </div>
 
-	<div class="previous">
+    <div class="previous">
         <a href="firstPage.php"><i class="fas fa-arrow-circle-left" style="color: black;font-size: 35px"></i></a>
-	</div>
+    </div>
 
 
     <div class="next">
@@ -218,77 +215,99 @@ else
 </script>
 
 <style>
-	body{
-		background-image: url("background.jpg");
-		background-size: auto;
+    body{
+        background-image: url("background.jpg");
+        background-size: auto;
         margin: 0px;
-		}
+    }
     .display-inlineBlock{
         display: inline-block;
-		background-color: #fff;
+        background-color: #fff;
     }
-	.top-bar{
-	    height: 70px;
-        border-bottom: 3px solid orange;
+    .menu{
+        align-self: center;
+        margin-right: 30px;
+
+    }
+    .top-bar{
+        background-color: #111111;
+        height: 70px;
+        border-bottom: 3px solid #ffc111;
+        display: flex;
+        justify-content: space-between;
     }
 
-	.logo img{
-		width: 160px;
-		height: 70px;
-		float: left;
-	}
-	.menu-bar {
-		float: right;
-	}
-	.menu-bar ico-icon{
-		vertical-align: bottom;
-		font-size: 20px;
-		float: right;
-	}
+    .logo img{
+        width: 160px;
+        height: 70px;
+        float: left;
+    }
+    .cart{
+        color: #ffc111;
+        display: inline-flex;
+        align-items: baseline;
+        font-size: 25px;
+        text-decoration: none;
+    }
+    .menu-bar {
+        float: right;
+    }
+    .menu-bar ico-icon{
+        vertical-align: bottom;
+        font-size: 20px;
+        float: right;
+    }
     .header{
         text-align: center;
         margin: 5px 0px;
     }
-	.title{
-		color: white;
-       text-align: center;
+    .button{
+        border-radius: 10px;
+        border-color: #AF7255;
+    }
+    .title{
+        border-radius: 20px;
+        color: white;
+        text-align: center;
         display: inline-block;
         padding: 0px 5px;
-		font-size: 40px;
-        background-color: orange;
-	}
+        font-size: 40px;
+        background-color: #ffc111;
+    }
 
-	.previous{
-		float: left;
+    .previous{
+        float: left;
         margin-left: 20px;
-	}
 
-	.next{
-		float: right;
+    }
+
+    .next{
+        float: right;
         margin-right: 20px;
-	}
 
-	.menu-bar li{
-		list-style: none;
-		display: inline-block;
-		padding-right: 10px;
-		padding-left: 10px;
-	}
-	
-	.menu-bar spna{
-		padding-left: 5px;
-	}
+    }
 
-	.menu-bar a{
-		padding: 5px;
-		background-color: #fff;
-		text-decoration: none;
-	}
+    .menu-bar li{
+        list-style: none;
+        display: inline-block;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
 
-	img {
-	width: 300px;
-	height: 300px;
-	}
+    .menu-bar spna{
+        padding-left: 5px;
+    }
+
+    .menu-bar a{
+        padding: 5px;
+        color: #ffc111;
+        text-decoration: none;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+    }
 
     .products{
 

@@ -61,7 +61,7 @@ else
 
     <div class="logo">
         <a href="firstPage.php">
-            <img src="logo.png">
+            <img src="logo2.png">
         </a>
 
     </div>
