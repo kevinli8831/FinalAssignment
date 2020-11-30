@@ -40,7 +40,7 @@ session_start();
     }
     ?>
     <div>
-        <span style="display: inline-block;min-width: 316px;margin-left: 130px">Total Money:</span>
+        <span style="display: inline-block;min-width: 316px;margin-left: 130px;font-size: 22px">Total Money:</span>
         <?php
         $temp=0;
         if (isset($_SESSION['globalProduct'])&&$_SESSION['selectedProduct'] )
@@ -53,7 +53,7 @@ session_start();
             }
         }
         $_SESSION['totalPrice']=$temp;
-        echo '<span style="color: #E5483F">'.'$'.$_SESSION['totalPrice'].'</span><br>';
+        echo '<span style="color: #E5483F;font-size: 22px">'.'$'.$_SESSION['totalPrice'].'</span><br>';
         ?>
     </div>
 	<div class="pay">
