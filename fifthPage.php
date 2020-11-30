@@ -1,5 +1,4 @@
 <?php
-include_once("firstPage.php");
 session_start();
 
 ?>
@@ -12,6 +11,19 @@ session_start();
 
 
 <body>
+	<div class="top-bar" >
+    <div class="logo">
+        <a href="firstPage.php">
+            <img src="logo2.png">
+        </a>
+
+
+    </div>
+    <div class="menu">
+        <a href="firstPage.php" style="color: #ffc111;font-size: 25px;text-decoration: none">Home</a>
+    </div>
+	</div>
+	
 <div class="container">
     <h1>Shopping Cart <?php
         if (isset($_SESSION['selectedProduct']))
@@ -57,9 +69,9 @@ session_start();
         echo '<span style="color: #E5483F;font-size: 22px">'.'$'.$_SESSION['totalPrice'].'</span><br>';
         ?>
     </div>
-	<div class="pay">
+	
         <form action="sixthPage.php" method="post">
-            <input type="submit" value="pay" name="pay">
+            <input type="submit" class="button myMOUSE" value="pay" name="pay">
         </form>
         <form action="fifthPage.php" method="post">
 
@@ -75,13 +87,16 @@ session_start();
 
             ?>
             <input type="hidden" name="reset" value="reset">
-            <input type="submit" value="reset" name="reset" >
+            <input type="submit" class="button myMOUSE" value="reset" name="reset" >
         </form>
 </div>
-
+	<div class="previous">
+        <a href="fourthPage.php"><i class="fas fa-arrow-circle-left" style="color: black;font-size: 35px"></i></a>
+    </div>
 
 </body>
-
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"    ></script>
 <style>
 	.container{
     margin: 0px 25%;
@@ -96,10 +111,65 @@ session_start();
         height: 100px;
     }
 	body{
-		background-image: url("background.jpg");
-		background-size: auto;
-		}
-		
+        background-image: url("background.jpg");
+        background-size: auto;
+        margin: 0px;
+    }
+    .display-inlineBlock{
+        display: inline-block;
+        background-color: #fff;
+    }
+    .menu{
+        align-self: center;
+        margin-right: 30px;
+
+    }
+    .top-bar{
+        background-color: #111111;
+        height: 70px;
+        border-bottom: 3px solid #ffc111;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo img{
+        width: 160px;
+        height: 70px;
+        float: left;
+    }
+	.previous{
+        float: left;
+        margin-left: 20px;
+
+    }
+	
+    .cart{
+        color: #ffc111;
+        display: inline-flex;
+        align-items: baseline;
+        font-size: 25px;
+        text-decoration: none;
+    }
+    .menu-bar {
+        float: right;
+    }
+    .menu-bar ico-icon{
+        vertical-align: bottom;
+        font-size: 20px;
+        float: right;
+    }
+	.button{
+        width: 105px;
+        height: 35px;
+        border-radius: 10px;
+        border-color: #AF7255;
+    }
+	.myMOUSE {
+        cursor: pointer;
+    }
+    .myMOUSE:hover {
+       background-color: coral;
+    }	
 	
 	
 </style>

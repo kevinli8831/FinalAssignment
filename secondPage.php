@@ -1,5 +1,4 @@
 <?php
-include_once("firstPage.php");
 session_set_cookie_params(0);
 session_start();
 $product=array
@@ -68,7 +67,7 @@ else
 
 <div class="header">
     <div class="title">
-        Snacks
+        <img src="snack.png">
     </div>
 </div>
 
@@ -259,15 +258,10 @@ else
         border-radius: 10px;
         border-color: #AF7255;
     }
-    .title{
-        border-radius: 20px;
-        color: white;
-        text-align: center;
-        display: inline-block;
-        padding: 0px 5px;
-        font-size: 40px;
-        background-color: #ffc111;
-    }
+    .title img{
+		width: 200px;
+        height: 100px;
+	}
 
     .previous{
         float: left;
