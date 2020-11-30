@@ -29,8 +29,8 @@ session_start();
             if ($_SESSION['selectedProduct'][$a]==$_SESSION['globalProduct'][$i][2]){
                 echo '<div class="row">';
                 $photo=$_SESSION['globalProduct'][$i][2];
-                echo '<img class="imgSize" src="' . $photo . '.jpg">';
-                echo '<span style="display: inline-block;min-width: 320px">'.$_SESSION['globalProduct'][$i][0].'</span>';
+                echo '<img class="imgSize" src="product' . $photo . '.jpg">';
+                echo '<span style="display: inline-block;min-width: 320px;margin-left: 30px">'.$_SESSION['globalProduct'][$i][0].'</span>';
                 echo "<span style='color: #E5483F'>".'$'.$_SESSION['globalProduct'][$i][1].'</span><br>';
                 echo '<hr></div>';
             }
@@ -38,7 +38,7 @@ session_start();
     }
     ?>
     <div>
-        <span style="display: inline-block;min-width: 316px">Total Money:</span>
+        <span style="display: inline-block;min-width: 316px;margin-left: 130px">Total Money:</span>
         <?php
         $temp=0;
         if (isset($_SESSION['globalProduct'])&&$_SESSION['selectedProduct'] )

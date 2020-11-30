@@ -74,7 +74,7 @@ else
 <div>
     <div class="row" >
         <div class="display-inlineBlock products" >
-            <img src="thirdPageDaily1.jpg" >
+            <img src="product7.jpg" >
             <div class="info">
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][6][0]."</h2>"?>
@@ -87,7 +87,7 @@ else
             </div>
         </div>
         <div class="display-inlineBlock products">
-            <img src="thirdPageDaily2.jpg" >
+            <img src="product8.jpg" >
             <div class="info">
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][7][0]."</h2>"?>
@@ -103,7 +103,7 @@ else
 
     <div class="row">
         <div class="display-inlineBlock products" >
-            <img src="thirdPageDaily3.jpg">
+            <img src="product9.jpg">
             <div class="info">
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][8][0]."</h2>"?>
@@ -118,7 +118,7 @@ else
         </div>
 
         <div class="display-inlineBlock products">
-            <img src="thirdPageDaily4.jpg">
+            <img src="product10.jpg">
             <div class="info">
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][9][0]."</h2>"?>
@@ -136,7 +136,7 @@ else
 
     <div class="row">
         <div class="display-inlineBlock products"  >
-            <img src="thirdPageDaily5.jpg">
+            <img src="product11.jpg">
             <div class="info">
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][10][0]."</h2>"?>
@@ -151,7 +151,7 @@ else
         </div>
 
         <div class="display-inlineBlock products">
-            <img src="thirdPageDaily6.jpg">
+            <img src="product12.jpg">
             <div class="info">
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][11][0]."</h2>"?>
