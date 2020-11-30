@@ -13,13 +13,15 @@
         </a>
     </div>
     <div class="menu">
-        <a href="firstPage.php" style="color: #ffc111;font-size: 25px;text-decoration: none">Home</a>
         <a href="fifthPage.php" class="cart"><ion-icon name="cart-outline" style="font-size: 25px;align-self: end;" ></ion-icon>
             &nbsp;<span id="cartItems" > Cart <?php if(isset($_SESSION['selectedProduct']))
                 echo sizeof($_SESSION['selectedProduct']) ;
                 else echo '0';
                 ?></php></span></a>
-    </div>
+</div>
+</div>
+<div style = "background-color: black;">
+	<img style = "width: 100%;height: 726px;opacity: 60%;" src = "main.jpg">
 </div>
 <div class ="container">
     <div class = "text-indent text">JP Station, is the latest retail store rise up currently. The product that made by Japan is well-known by the world due to it’s quality and practicality. As a result, more and more consumer among the world are more willing to purchase products that made in Japan. Which the quantity of Japanese goods upsurge in order to satisfy the demand from society.</div>
@@ -28,12 +30,12 @@
     <div class = "text-indent text">We shall acquire a good management for ourselves before providing the service to our customers. The following is the six precepts of our management philosophy:</div>
     <div>
         <ul>
-            <li>We commit ourselves to doing business in a manner that is unselfish, 100% honest, and grounded in a strong sense of morality and purpose.</li>
-            <li>In every age, we create shop floors that evoke the anticipation and excitement of finding astonishingly cheap goods.</li>
-            <li>Boldly granting authority to those at the center of things, we are always ready to move people around, to make sure they are in the best possible position.</li>
-            <li>We are committed to creative destruction and the ability to adapt; we reject pre-established harmony and the hesitancy to do anything that might rock the boat.</li>
-            <li>We are unhesitant in the face of daunting challenges, and unafraid to beat a rapid retreat when a cold, hard look at reality tells us this is the best course.</li>
-            <li>Undistracted by easy profits, we hone to perfection the strengths that form our core business.</li>
+            <li style = "margin-bottom: 11px">We commit ourselves to doing business in a manner that is unselfish, 100% honest, and grounded in a strong sense of morality and purpose.</li>
+            <li style = "margin-bottom: 11px">In every age, we create shop floors that evoke the anticipation and excitement of finding astonishingly cheap goods.</li>
+            <li style = "margin-bottom: 11px">Boldly granting authority to those at the center of things, we are always ready to move people around, to make sure they are in the best possible position.</li>
+            <li style = "margin-bottom: 11px">We are committed to creative destruction and the ability to adapt; we reject pre-established harmony and the hesitancy to do anything that might rock the boat.</li>
+            <li style = "margin-bottom: 11px">We are unhesitant in the face of daunting challenges, and unafraid to beat a rapid retreat when a cold, hard look at reality tells us this is the best course.</li>
+            <li style = "margin-bottom: 11px">Undistracted by easy profits, we hone to perfection the strengths that form our core business.</li>
         </ul>
     </div>
     <div class = "text-indent text">We hope that we could provide the best shopping experience for all customers. Please do enjoy your shopping and able to purchase your goods.</div>
