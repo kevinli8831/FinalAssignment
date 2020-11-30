@@ -4,6 +4,34 @@
 <title>firstPage</title>
 </head>
 
+<!--<div> //whole  display block-->
+<!--    <a href="secondPage.php">-->
+<!--        <div>-->
+<!--            //left display-inline-block-->
+<!--        </div>-->
+<!---->
+<!--        <div>-->
+<!--            //right display-inline-block-->
+<!--        </div>-->
+<!--    </a>-->
+<!---->
+<!--</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <body>
 <div class="top-bar">
