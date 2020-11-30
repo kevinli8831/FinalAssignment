@@ -1,5 +1,4 @@
 <?php
-include_once("firstPage.php");
 session_start();
 
 ?>
