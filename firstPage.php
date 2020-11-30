@@ -20,8 +20,8 @@
                 ?></php></span></a>
 </div>
 </div>
-<div style = "background-color: black;">
-	<img style = "width: 100%;height: 726px;opacity: 60%;" src = "main.jpg">
+<div>
+	<img style = "width: 100%;height: 726px;filter: brightness(60%);" src = "main.jpg">
 </div>
 <div class ="container">
     <div class = "text-indent text">JP Station, is the latest retail store rise up currently. The product that made by Japan is well-known by the world due to it’s quality and practicality. As a result, more and more consumer among the world are more willing to purchase products that made in Japan. Which the quantity of Japanese goods upsurge in order to satisfy the demand from society.</div>
