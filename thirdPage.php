@@ -67,7 +67,7 @@ else
 
 <div class="header">
     <div class="title">
-        Daily Consumable
+        <img src="beatycare.png">
     </div>
 </div>
 
@@ -256,15 +256,10 @@ else
         border-radius: 10px;
         border-color: #AF7255;
     }
-    .title{
-        border-radius: 20px;
-        color: white;
-        text-align: center;
-        display: inline-block;
-        padding: 0px 5px;
-        font-size: 40px;
-        background-color: #ffc111;
-    }
+    .title img{
+		width: 250px;
+        height: 125px;
+	}
 
     .previous{
         float: left;
