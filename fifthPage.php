@@ -71,7 +71,7 @@ session_start();
     </div>
 	
         <form action="sixthPage.php" method="post">
-            <input type="submit" value="pay" name="pay">
+            <input type="submit" class="button myMOUSE" value="pay" name="pay">
         </form>
         <form action="fifthPage.php" method="post">
 
@@ -87,7 +87,7 @@ session_start();
 
             ?>
             <input type="hidden" name="reset" value="reset">
-            <input type="submit" value="reset" name="reset" >
+            <input type="submit" class="button myMOUSE" value="reset" name="reset" >
         </form>
 </div>
 	<div class="previous">
