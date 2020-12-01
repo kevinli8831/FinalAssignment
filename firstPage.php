@@ -49,18 +49,20 @@
 
     <div><table style= "width:90%">
             <tr>
-                <td style= "text-align: center"><img style="width: 520px" src = "main1.jpeg"></td>
-                <td><div class = "text-indent text">JP Station, is the latest retail store rise up currently. The product that made by Japan is well-known by the world due to it’s quality and practicality.</div></td>
+                <td style= "text-align: center;min-width: 792px"><img style="width: 520px" src = "main1.jpeg"></td>
+                <td>
+                    <div class = "text-indent text" style="width: 520px;text-align: justify;">JP Station, is the latest retail store rise up currently. The product that made by Japan is well-known by the world due to it’s quality and practicality.</div>
+                </td>
             </tr>
 
             <tr>
-                <td><div class = "text-indent text">We discovered that many people would like to go to Japan for shopping. And they are targeted at purchasing snacks and daily necessities. Therefore, we decided to open up a retail store for them to buy all these related products therefore they can also buy japan’s products in Hong Kong without going out for a trip.</div></td>
+                <td style="text-align: center"><div class = "text-indent text" style="width: 520px;display: inline-block;text-align: justify">We discovered that many people would like to go to Japan for shopping. And they are targeted at purchasing snacks and daily necessities. Therefore, we decided to open up a retail store for them to buy all these related products therefore they can also buy japan’s products in Hong Kong without going out for a trip.</div></td>
                 <td style= "text-align: center"><img style="width: 520px" src = "main2.jpg"></td>
             </tr>
 
             <tr>
                 <td style= "text-align: center"><img style="width: 520px" src = "main3.jpg"></td>
-                <td><div class = "text-indent text">For the purpose of providing the best service for the customer. We will offer direct interaction with customers and we will treat customer as our vital character. The principal of our operation is “Customers Matters Most”! This is the unchanging principle.</div></td>
+                <td><div class = "text-indent text" style="width: 520px;text-align: justify;"">For the purpose of providing the best service for the customer. We will offer direct interaction with customers and we will treat customer as our vital character. The principal of our operation is “Customers Matters Most”! This is the unchanging principle.</div></td>
             </tr>
         </table></div>
 
@@ -103,6 +105,7 @@
     .text{
         line-height: 35px;
         margin-bottom: 20px;
+
     }
 
     .menu{
