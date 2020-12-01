@@ -66,20 +66,16 @@
             </tr>
         </table></div>
 
-    <div class = "text-indent text">We shall acquire a good management for ourselves before providing the service to our customers. The following is the six precepts of our management philosophy:</div>
-    <div>
-        <ul>
-            <li style = "margin-bottom: 11px">We commit ourselves to doing business in a manner that is unselfish, 100% honest, and grounded in a strong sense of morality and purpose.</li>
-            <li style = "margin-bottom: 11px">In every age, we create shop floors that evoke the anticipation and excitement of finding astonishingly cheap goods.</li>
-            <li style = "margin-bottom: 11px">Boldly granting authority to those at the center of things, we are always ready to move people around, to make sure they are in the best possible position.</li>
-            <li style = "margin-bottom: 11px">We are committed to creative destruction and the ability to adapt; we reject pre-established harmony and the hesitancy to do anything that might rock the boat.</li>
-            <li style = "margin-bottom: 11px">We are unhesitant in the face of daunting challenges, and unafraid to beat a rapid retreat when a cold, hard look at reality tells us this is the best course.</li>
-            <li style = "margin-bottom: 11px">Undistracted by easy profits, we hone to perfection the strengths that form our core business.</li>
-        </ul>
-    </div>
     <div class = "text-indent text">We hope that we could provide the best shopping experience for all customers. Please do enjoy your shopping and able to purchase your goods.</div>
-    <div class="next">
-        <a href="secondPage.php"> <span>Next Page<ion-icon name="arrow-forward-outline"></ion-icon></span></a>
+    <div style ="text-align: center">
+        <a style="text-decoration: none;" href="secondPage.php">
+            <div class="leftbutton">
+                Start Shopping
+            </div>
+            <div class="rightbutton">
+                Go!!!
+            </div>
+        </a>
     </div>
 </div>
 </div>
@@ -137,6 +133,29 @@
 
     .container{
         margin:90px 150px;
+    }
+
+    .leftbutton{
+        display: inline-block;
+        background-color: #111111;
+        color: white;
+        width: 670px;
+        height: 70px;
+        text-align: center;
+        line-height: 63px;
+        font-size: 40px;
+    }
+
+    .rightbutton{
+        display: inline-block;
+        background-color: #FFC112;
+        color: #111111;
+        width: 270px;
+        height: 70px;
+        text-align: center;
+        line-height: 63px;
+        font-size: 40px;
+        margin-left: -6px;
     }
 </style>
 </html>
