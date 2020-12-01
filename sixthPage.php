@@ -171,12 +171,25 @@
 </head>
 <body>
 
+<div class="top-bar">
+    <div class="logo">
+        <a href="firstPage.php">
+            <img src="logo2.png">
+        </a>
+    </div>
+    <div class="menu">
+        <a href="fifthPage.php" class="cart"><ion-icon name="cart-outline" style="font-size: 25px;align-self: end;" ></ion-icon>
+            &nbsp;<span id="cartItems" > Cart <?php if(isset($_SESSION['selectedProduct']))
+                echo sizeof($_SESSION['selectedProduct']) ;
+                else echo '0';
+                ?></php></span></a>
 
+</div></div>
 
-
-
-
-
+<div style='text-align:center; line-height:600px'>
+<b><font size="7"; color="#0000FF">
+Thank You
+</font></b></div>
 
 
 
@@ -191,6 +204,38 @@
 
 
 <style>
+    body{
+        background-image: url("background.jpg");
+        background-size: auto;
+        margin: 0px;
+    }
+	
+	.menu{
+        align-self: center;
+        margin-right: 30px;
+
+    }
+	.top-bar{
+        background-color: #111111;
+        height: 70px;
+        border-bottom: 3px solid #ffc111;
+        display: flex;
+        justify-content: space-between;
+    }
+	.logo img{
+        width: 160px;
+        height: 70px;
+        float: left;
+    }
+	
+	.cart{
+        color: #ffc111;
+        display: inline-flex;
+        align-items: baseline;
+        font-size: 25px;
+        text-decoration: none;
+    }
+
 
 </style>
 </html>
