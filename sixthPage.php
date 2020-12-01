@@ -1,4 +1,6 @@
-<html><head><title>sixthPage</title></head><body>
+<html><head><style data-styles="">ion-icon{visibility:hidden}.hydrated{visibility:inherit}</style>
+<title>sixthPage</title>
+<script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js" data-stencil-namespace="ionicons"></script><script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js" data-stencil-namespace="ionicons"></script></head><body>
 
 <div class="top-bar">
     <div class="logo">
@@ -11,7 +13,7 @@
     <div class="menu">
         <a href="firstPage.php" style="color: #ffc111;font-size: 25px;text-decoration: none">Home</a>
         <a href="fifthPage.php" class="cart"><ion-icon name="cart-outline" style="font-size: 25px;align-self: end;" role="img" class="md hydrated" aria-label="cart outline"></ion-icon>
-            &nbsp;<span id="cartItems"> Cart 3</span></a>
+            &nbsp;<span id="cartItems"> Cart 0</span></a>
     </div>
 
 
