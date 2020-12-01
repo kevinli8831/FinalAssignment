@@ -29,7 +29,6 @@ $selectedProduct=array();
 if(isset($_POST['value']))
 {
     $temp=$_POST['value'];
-//    array_push($selectedProduct,$temp);
 
 }
 if(isset($_SESSION['selectedProduct'])&& isset($_POST['value']))
@@ -39,14 +38,6 @@ if(isset($_SESSION['selectedProduct'])&& isset($_POST['value']))
 else
     if(empty($_SESSION['selectedProduct']))
         $_SESSION['selectedProduct']=array();
-
-// Testing shopping cart items array
-//if(isset($_SESSION['selectedProduct']))
-//foreach($_SESSION['selectedProduct'] as $key=>$value)
-//{
-//    // and print out the values
-//    echo 'The value of $_SESSION['."'".$key."'".'] is '."'".$value."'".' <br />';
-//}
 
 ?>
 
@@ -67,8 +58,8 @@ else
     </div>
     <div class="menu">
         <a href="firstPage.php" style="color: #ffc111;font-size: 25px;text-decoration: none">Home</a>
-        <a href="fifthPage.php" class="cart"> <ion-icon name="cart-outline" style="font-size: 25px;align-self: end;" ></ion-icon>
-           <span id="cartItems" > Cart<?php echo sizeof($_SESSION['selectedProduct']) ?></php></span></a>
+        <a href="fifthPage.php" class="cart"><ion-icon name="cart-outline" style="font-size: 25px;align-self: end;" ></ion-icon>
+            &nbsp;<span id="cartItems" > Cart <?php echo sizeof($_SESSION['selectedProduct']) ?></php></span></a>
     </div>
 
 
@@ -76,14 +67,14 @@ else
 
 <div class="header">
     <div class="title">
-        Snacks
+        <img src="snack.png">
     </div>
 </div>
 
 <div>
     <div class="row" >
         <div class="display-inlineBlock products" >
-            <img src="secondPageFood1.jpg" >
+            <img src="product1.jpg" >
             <div class="info">
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][0][0]."</h2>"?>
@@ -91,12 +82,12 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="1">
-                    <input type="submit" class="button" value="Add to cart">
+                    <input  type="submit" class="button myMOUSE" value="Add to cart">
                 </form>
             </div>
         </div>
         <div class="display-inlineBlock products">
-            <img src="secondPageFood2.jpeg" >
+            <img src="product2.jpg" >
             <div class="info">
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][1][0]."</h2>"?>
@@ -104,7 +95,7 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="2">
-                    <input type="submit" class="button" value="Add to cart">
+                    <input type="submit" class="button myMOUSE" value="Add to cart">
                 </form>
             </div>
         </div>
@@ -112,7 +103,7 @@ else
 
     <div class="row">
         <div class="display-inlineBlock products" >
-            <img src="secondPageFood3.jpg">
+            <img src="product3.jpg">
             <div class="info">
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][2][0]."</h2>"?>
@@ -120,14 +111,14 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="3">
-                    <input type="submit" class="button" value="Add to cart">
+                    <input type="submit" class="button myMOUSE" value="Add to cart">
                 </form>
             </div>
 
         </div>
 
         <div class="display-inlineBlock products">
-            <img src="secondPageFood4.jpg">
+            <img src="product4.jpg">
             <div class="info">
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][3][0]."</h2>"?>
@@ -135,7 +126,7 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="4">
-                    <input type="submit" class="button" value="Add to cart">
+                    <input type="submit" class="button myMOUSE" value="Add to cart">
                 </form>
             </div>
 
@@ -145,22 +136,22 @@ else
 
     <div class="row">
         <div class="display-inlineBlock products"  >
-            <img src="secondPageFood5.jpg">
+            <img src="product5.jpg">
             <div class="info">
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][4][0]."</h2>"?>
                     <?php echo "<h3>$".$_SESSION['globalProduct'][4][1]."</h3>"?>
                 </div>
                 <form action="secondPage.php" method="post">
-                    <input type="hidden" name="value" value="5">
-                    <input type="submit" class="button" value="Add to cart">
+                    <input  type="hidden" name="value" value="5">
+                    <input type="submit" class="button myMOUSE" value="Add to cart">
                 </form>
             </div>
 
         </div>
 
         <div class="display-inlineBlock products">
-            <img src="secondPageFood6.jpg">
+            <img src="product6.jpg">
             <div class="info">
                 <div>
                     <?php echo "<h2>".$_SESSION['globalProduct'][5][0]."</h2>"?>
@@ -168,7 +159,7 @@ else
                 </div>
                 <form action="secondPage.php" method="post">
                     <input type="hidden" name="value" value="6">
-                    <input type="submit" class="button" value="Add to cart">
+                    <input type="submit" class="button myMOUSE" value="Add to cart">
                 </form>
             </div>
 
@@ -262,18 +253,15 @@ else
         margin: 5px 0px;
     }
     .button{
+        width: 105px;
+        height: 35px;
         border-radius: 10px;
         border-color: #AF7255;
     }
-    .title{
-        border-radius: 20px;
-        color: white;
-        text-align: center;
-        display: inline-block;
-        padding: 0px 5px;
-        font-size: 40px;
-        background-color: #ffc111;
-    }
+    .title img{
+		width: 200px;
+        height: 100px;
+	}
 
     .previous{
         float: left;
@@ -293,7 +281,12 @@ else
         padding-right: 10px;
         padding-left: 10px;
     }
-
+    .myMOUSE {
+        cursor: pointer;
+    }
+    .myMOUSE:hover {
+       background-color: coral;
+    }
     .menu-bar spna{
         padding-left: 5px;
     }

@@ -1,0 +1,10 @@
+diff a/thirdPage.php b/thirdPage.php	(rejected hunks)
+@@ -67,7 +67,7 @@
+ 
+ <div class="header">
+     <div class="title">
+-        Daily Consumable
++        <img src="beatycare.png">
+     </div>
+ </div>
+ 
