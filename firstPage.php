@@ -74,7 +74,9 @@
             </div>
             <div class="rightbutton">
                 Go!!!
+                <img src="bg_click01.jpg" style="position: absolute;right: -101px;height: 70px;}">
             </div>
+
         </a>
     </div>
 </div>
@@ -154,8 +156,9 @@
         height: 70px;
         text-align: center;
         line-height: 63px;
+        position: relative;
         font-size: 40px;
-        margin-left: -6px;
+        margin-left: -8px;
     }
 </style>
 </html>
