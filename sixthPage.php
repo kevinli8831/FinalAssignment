@@ -160,7 +160,7 @@
 //            echo "globalProduct and selectedProduct not exists.";
 //
 //}
-
+//session_destroy();
 //$connect->close();
 
 ?>
