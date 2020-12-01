@@ -26,7 +26,7 @@ session_start();
 	
 <div class="container">
     <h1>Shopping Cart <?php
-        if (isset($_SESSION['selectedProduct']))
+        if (isset($_SESSION['selectedProduct']))// check any selectedProduct
         echo sizeof($_SESSION['selectedProduct']);
         else
             echo '0';
@@ -34,12 +34,12 @@ session_start();
         items</h1>
 
     <?php
-    if(isset($_SESSION['globalProduct'])&&$_SESSION['selectedProduct'])
+    if(isset($_SESSION['globalProduct'])&&$_SESSION['selectedProduct'])//// check globalProduct equal to selectedProduct
     for($i=0;$i<sizeof($_SESSION['globalProduct']);$i++)
     {
         for($a=0;$a<sizeof($_SESSION['selectedProduct']);$a++)
         {
-            if ($_SESSION['selectedProduct'][$a]==$_SESSION['globalProduct'][$i][2]){
+            if ($_SESSION['selectedProduct'][$a]==$_SESSION['globalProduct'][$i][2]){// check globalProduct equal to selectedProduct
                 echo '<div class="row" style="display: flex;align-items: center">';
                 $photo=$_SESSION['globalProduct'][$i][2];
                 echo '<img class="imgSize" src="product' . $photo . '.jpg">';
@@ -56,12 +56,12 @@ session_start();
         <span style="display: inline-block;min-width: 316px;margin-left: 130px;font-size: 22px">Total Money:</span>
         <?php
         $temp=0;
-        if (isset($_SESSION['globalProduct'])&&$_SESSION['selectedProduct'] )
-        for($i=0;$i<sizeof($_SESSION['globalProduct']);$i++)
+        if (isset($_SESSION['globalProduct'])&&$_SESSION['selectedProduct'] )// check globalProduct equal to selectedProduct
+        for($i=0;$i<sizeof($_SESSION['globalProduct']);$i++) 
         {
          for($a=0;$a<sizeof($_SESSION['selectedProduct']);$a++)
         {
-            if ($_SESSION['selectedProduct'][$a]==$_SESSION['globalProduct'][$i][2])
+            if ($_SESSION['selectedProduct'][$a]==$_SESSION['globalProduct'][$i][2]) //count the total money
            $temp=$temp+$_SESSION['globalProduct'][$i][1];
             }
         }
@@ -76,10 +76,10 @@ session_start();
         <form action="fifthPage.php" method="post">
 
             <?php
-            if (isset($_POST['reset']))
+            if (isset($_POST['reset']))//check the reset button
             $reset=$_POST['reset'];
 
-            if(isset($reset))
+            if(isset($reset))// destory the value
             {
                 session_destroy();
                 header('Location:fifthPage.php');

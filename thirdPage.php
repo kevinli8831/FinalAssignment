@@ -26,17 +26,17 @@ $_SESSION['globalProduct']=$product;
 
 $selectedProduct=array();
 
-if(isset($_POST['value']))
+if(isset($_POST['value']))//check the value
 {
     $temp=$_POST['value'];
 
 }
-if(isset($_SESSION['selectedProduct'])&& isset($_POST['value']))
+if(isset($_SESSION['selectedProduct'])&& isset($_POST['value']))//check the selectedProduct and show the value
 {
     array_push($_SESSION['selectedProduct'],$temp);
 }
 else
-    if(empty($_SESSION['selectedProduct']))
+    if(empty($_SESSION['selectedProduct']))//show 0
         $_SESSION['selectedProduct']=array();
 
 ?>
@@ -253,6 +253,8 @@ else
         margin: 5px 0px;
     }
     .button{
+        width: 105px;
+        height: 35px;
         border-radius: 10px;
         border-color: #AF7255;
     }
@@ -282,6 +284,10 @@ else
     .myMOUSE {
         cursor: pointer;
     }
+	.myMOUSE:hover {
+	background-color: coral;
+	}
+    
     .menu-bar spna{
         padding-left: 5px;
     }
