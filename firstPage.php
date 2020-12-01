@@ -47,6 +47,9 @@
 </div>
 <div class ="container">
 
+    <H1 style="text-align: center">
+        About Us
+    </H1>
     <div><table style= "width:90%">
             <tr>
                 <td style= "text-align: center;min-width: 792px"><img style="width: 520px" src = "main1.jpeg"></td>
@@ -67,7 +70,7 @@
         </table></div>
 
     <div class = "text-indent text">We hope that we could provide the best shopping experience for all customers. Please do enjoy your shopping and able to purchase your goods.</div>
-    <div style ="text-align: center">
+    <div style ="text-align: center;margin-top: 120px;">
         <a style="text-decoration: none;" href="secondPage.php">
             <div class="leftbutton">
                 Start Shopping
