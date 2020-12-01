@@ -69,7 +69,7 @@
             </tr>
         </table></div>
 
-    <div class = "text-indent text">We hope that we could provide the best shopping experience for all customers. Please do enjoy your shopping and able to purchase your goods.</div>
+    <div style="margin-top: 50px;" class = "text-indent text">We hope that we could provide the best shopping experience for all customers. Please do enjoy your shopping and able to purchase your goods.</div>
     <div style ="text-align: center;margin-top: 120px;">
         <a style="text-decoration: none;" href="secondPage.php">
             <div class="leftbutton">
@@ -137,7 +137,7 @@
     }
 
     .container{
-        margin:90px 150px;
+        margin:9px 150px 90px;
     }
 
     .leftbutton{
