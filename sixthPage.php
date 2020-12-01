@@ -177,19 +177,17 @@
             <img src="logo2.png">
         </a>
     </div>
-    <div class="menu">
-        <a href="fifthPage.php" class="cart"><ion-icon name="cart-outline" style="font-size: 25px;align-self: end;" ></ion-icon>
-            &nbsp;<span id="cartItems" > Cart <?php if(isset($_SESSION['selectedProduct']))
-                echo sizeof($_SESSION['selectedProduct']) ;
-                else echo '0';
-                ?></php></span></a>
+    </div>
 
-</div></div>
-
-<div style='text-align:center; line-height:600px'>
-<b><font size="7"; color="#0000FF">
-Thank You
-</font></b></div>
+<div style='text-align:center; line-height:20px'>
+<br/>
+<img src="thankyou.gif"><br/>
+<br/>
+<form action="secondPage.php" method="post">
+            <input type="submit" value="continue shopping" style="width:180px;height:50px;font-size:20px;">
+        </form><br/>
+<img src="continueshopping.gif">
+</div>
 
 
 
@@ -205,7 +203,7 @@ Thank You
 
 <style>
     body{
-        background-image: url("background.jpg");
+        background-image: url("thankpage.jpg");
         background-size: auto;
         margin: 0px;
     }
@@ -228,13 +226,6 @@ Thank You
         float: left;
     }
 	
-	.cart{
-        color: #ffc111;
-        display: inline-flex;
-        align-items: baseline;
-        font-size: 25px;
-        text-decoration: none;
-    }
 
 
 </style>
