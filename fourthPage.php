@@ -1,28 +1,7 @@
 <?php
 session_set_cookie_params(0);
 session_start();
-$product=array
-(
-    array("Biscuit",25,1),
-    array("Corn Soup",30,2),
-    array("Fries Three Brothers",100,3),
-    array("Calbee Chip",16,4),
-    array("Curry Cup Noodle",10,5),
-    array("Cheese Curry Cup Noodle",20,6),
-    array("Hand Wash",40,7),
-    array("Body Wash",50,8),
-    array("Shampoo",55,9),
-    array("Conditioner",55,10),
-    array("Face Wash",50,11),
-    array("Paper Mask",50,12),
-    array("Green Tea",10,13),
-    array("Red Tea",15,14),
-    array("Coffee",27,15),
-    array("Tomato Juice",14,16),
-    array("Earl Grey Tea",115,17),
-    array("Soy Milk",21,18),
-);
-$_SESSION['globalProduct']=$product;
+
 
 $selectedProduct=array();
 
@@ -168,12 +147,12 @@ else
     </div>
 
     <div class="previous">
-        <a href="thirdPage.php"><i class="fas fa-arrow-circle-left" style="color: black;font-size: 35px"></i></a>
+        <a href="thirdPage.php"><i class="fas fa-arrow-circle-left changeColor" style="color: black;font-size: 35px"></i></a>
     </div>
 
 
     <div class="next">
-        <a href="fifthPage.php"><i class="fas fa-arrow-circle-right" style="color: black;font-size: 35px"></i></a>
+        <a href="fifthPage.php"><i class="fas fa-arrow-circle-right changeColor" style="color: black;font-size: 35px"></i></a>
     </div>
 
 
@@ -308,6 +287,9 @@ else
         background-color: cornsilk;
         border-radius: 15px;
         border: 5px solid #AF7255;
+    }
+    .changeColor:hover{
+        color: #ffc111 !important;
     }
     .row {
         display: flex;

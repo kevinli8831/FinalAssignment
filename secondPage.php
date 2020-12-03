@@ -1,6 +1,7 @@
 <?php
 session_set_cookie_params(0);
 session_start();
+
 $product=array
 (
     array("Biscuit",25,1),
@@ -168,12 +169,12 @@ else
     </div>
 
     <div class="previous">
-        <a href="firstPage.php"><i class="fas fa-arrow-circle-left" style="color: black;font-size: 35px"></i></a>
+        <a href="firstPage.php"><i class="fas fa-arrow-circle-left changeColor"  style="color: black;font-size: 35px"></i></a>
     </div>
 
 
     <div class="next">
-        <a href="thirdPage.php"><i class="fas fa-arrow-circle-right" style="color: black;font-size: 35px"></i></a>
+        <a href="thirdPage.php"><i class="fas fa-arrow-circle-right changeColor" style="color: black;font-size: 35px"></i></a>
     </div>
 
 
@@ -266,7 +267,9 @@ else
     .previous{
         float: left;
         margin-left: 20px;
-
+    }
+    .changeColor:hover{
+        color: #ffc111 !important;
     }
 
     .next{
@@ -314,6 +317,7 @@ else
         justify-content: space-evenly;
         margin-bottom: 30px;
     }
+
 </style>
 
 </html>

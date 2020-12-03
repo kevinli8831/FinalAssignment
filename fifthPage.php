@@ -35,7 +35,8 @@ session_start();
 
     <?php
     if(isset($_SESSION['globalProduct'])&&$_SESSION['selectedProduct'])//// check globalProduct equal to selectedProduct
-    for($i=0;$i<sizeof($_SESSION['globalProduct']);$i++)
+        // 2 for loop is comparing globalProduct id with selectProduct id, if there are the same id, then copy globalProduct into jp database
+        for($i=0;$i<sizeof($_SESSION['globalProduct']);$i++)
     {
         for($a=0;$a<sizeof($_SESSION['selectedProduct']);$a++)
         {
@@ -69,15 +70,17 @@ session_start();
         echo '<span style="color: #E5483F;font-size: 22px">'.'$'.$_SESSION['totalPrice'].'</span><br>';
         ?>
     </div>
-	
+
+    <div style="display: flex;justify-content: space-between;margin-top: 30px">
         <form action="sixthPage.php" method="post">
             <input type="submit" class="button myMOUSE" value="pay" name="pay">
         </form>
+
         <form action="fifthPage.php" method="post">
 
             <?php
             if (isset($_POST['reset']))//check the reset button
-            $reset=$_POST['reset'];
+                $reset=$_POST['reset'];
 
             if(isset($reset))// destory the value
             {
@@ -86,12 +89,16 @@ session_start();
             }
 
             ?>
+
+
             <input type="hidden" name="reset" value="reset">
             <input type="submit" class="button myMOUSE" value="reset" name="reset" >
         </form>
+    </div>
+
 </div>
 	<div class="previous">
-        <a href="fourthPage.php"><i class="fas fa-arrow-circle-left" style="color: black;font-size: 35px"></i></a>
+        <a href="fourthPage.php"><i class="fas fa-arrow-circle-left changeColor" style="color: black;font-size: 35px"></i></a>
     </div>
 
 </body>
@@ -99,7 +106,7 @@ session_start();
 <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"    ></script>
 <style>
 	.container{
-    margin: 0px 25%;
+    margin: 30px 25%;
 	padding: 10px;
         background-color: cornsilk;
         border-radius: 15px;
@@ -169,8 +176,10 @@ session_start();
     }
     .myMOUSE:hover {
        background-color: coral;
-    }	
-	
+    }
+    .changeColor:hover{
+        color: #ffc111 !important;
+    }
 	
 </style>
 </html>
